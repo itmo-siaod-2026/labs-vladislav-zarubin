@@ -1,0 +1,3278 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< geosearch:geo-search >------------------------
+[INFO] Building geo-search 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ geo-search ---
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.0:compile (default-compile) @ geo-search ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- exec:3.5.0:java (default-cli) @ geo-search ---
+# JMH version: 1.37
+# VM version: JDK 25.0.2, OpenJDK 64-Bit Server VM, 25.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: --enable-native-access=ALL-UNNAMED -Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf -Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec -Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 500 ms each
+# Measurement: 5 iterations, 500 ms each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput
+# Parameters: (radius = 0.1, size = 10000)
+
+# Run progress: 0,00% complete, ETA 00:02:48
+# Fork: N/A, test runs in the host VM
+# *** WARNING: Non-forked runs may silently omit JVM options, mess up profilers, disable compiler hints, etc. ***
+# *** WARNING: Use non-forked runs only for debugging purposes, not for actual performance runs. ***
+# Warmup Iteration   1: 81230,054 ops/s
+# Warmup Iteration   2: 90116,902 ops/s
+# Warmup Iteration   3: 95060,815 ops/s
+Iteration   1: 97273,134 ops/s
+                 gc.alloc.rate:      2,249 MB/sec
+                 gc.alloc.rate.norm: 24,252 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   2: 97388,936 ops/s
+                 gc.alloc.rate:      2,252 MB/sec
+                 gc.alloc.rate.norm: 24,252 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   3: 97495,298 ops/s
+                 gc.alloc.rate:      2,254 MB/sec
+                 gc.alloc.rate.norm: 24,252 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   4: 102049,811 ops/s
+                 gc.alloc.rate:      2,359 MB/sec
+                 gc.alloc.rate.norm: 24,246 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   5: 99892,121 ops/s
+                 gc.alloc.rate:      2,309 MB/sec
+                 gc.alloc.rate.norm: 24,250 B/op
+                 gc.count:           ≈ 0 counts
+
+
+Result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput":
+  98819,860 ±(99.9%) 8117,624 ops/s [Average]
+  (min, avg, max) = (97273,134, 98819,860, 102049,811), stdev = 2108,121
+  CI (99.9%): [90702,237, 106937,484] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput:gc.alloc.rate":
+  2,285 ±(99.9%) 0,186 MB/sec [Average]
+  (min, avg, max) = (2,249, 2,285, 2,359), stdev = 0,048
+  CI (99.9%): [2,098, 2,471] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput:gc.alloc.rate.norm":
+  24,250 ±(99.9%) 0,011 B/op [Average]
+  (min, avg, max) = (24,246, 24,250, 24,252), stdev = 0,003
+  CI (99.9%): [24,239, 24,262] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput:gc.count":
+  ≈ 0 counts
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.2, OpenJDK 64-Bit Server VM, 25.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: --enable-native-access=ALL-UNNAMED -Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf -Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec -Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 500 ms each
+# Measurement: 5 iterations, 500 ms each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput
+# Parameters: (radius = 0.1, size = 100000)
+
+# Run progress: 2,38% complete, ETA 00:02:47
+# Fork: N/A, test runs in the host VM
+# *** WARNING: Non-forked runs may silently omit JVM options, mess up profilers, disable compiler hints, etc. ***
+# *** WARNING: Use non-forked runs only for debugging purposes, not for actual performance runs. ***
+# Warmup Iteration   1: 10183,495 ops/s
+# Warmup Iteration   2: 10180,503 ops/s
+# Warmup Iteration   3: 10097,280 ops/s
+Iteration   1: 10166,980 ops/s
+                 gc.alloc.rate:      0,269 MB/sec
+                 gc.alloc.rate.norm: 27,727 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   2: 10111,454 ops/s
+                 gc.alloc.rate:      0,267 MB/sec
+                 gc.alloc.rate.norm: 27,727 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   3: 10144,912 ops/s
+                 gc.alloc.rate:      0,268 MB/sec
+                 gc.alloc.rate.norm: 27,727 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   4: 9740,550 ops/s
+                 gc.alloc.rate:      0,259 MB/sec
+                 gc.alloc.rate.norm: 27,853 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   5: 10082,003 ops/s
+                 gc.alloc.rate:      0,267 MB/sec
+                 gc.alloc.rate.norm: 27,727 B/op
+                 gc.count:           ≈ 0 counts
+
+
+Result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput":
+  10049,180 ±(99.9%) 675,921 ops/s [Average]
+  (min, avg, max) = (9740,550, 10049,180, 10166,980), stdev = 175,535
+  CI (99.9%): [9373,259, 10725,101] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput:gc.alloc.rate":
+  0,266 ±(99.9%) 0,016 MB/sec [Average]
+  (min, avg, max) = (0,259, 0,266, 0,269), stdev = 0,004
+  CI (99.9%): [0,250, 0,282] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput:gc.alloc.rate.norm":
+  27,752 ±(99.9%) 0,217 B/op [Average]
+  (min, avg, max) = (27,727, 27,752, 27,853), stdev = 0,056
+  CI (99.9%): [27,534, 27,969] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput:gc.count":
+  ≈ 0 counts
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.2, OpenJDK 64-Bit Server VM, 25.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: --enable-native-access=ALL-UNNAMED -Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf -Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec -Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 500 ms each
+# Measurement: 5 iterations, 500 ms each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput
+# Parameters: (radius = 0.1, size = 1000000)
+
+# Run progress: 4,76% complete, ETA 00:02:48
+# Fork: N/A, test runs in the host VM
+# *** WARNING: Non-forked runs may silently omit JVM options, mess up profilers, disable compiler hints, etc. ***
+# *** WARNING: Use non-forked runs only for debugging purposes, not for actual performance runs. ***
+# Warmup Iteration   1: 988,900 ops/s
+# Warmup Iteration   2: 925,972 ops/s
+# Warmup Iteration   3: 985,755 ops/s
+Iteration   1: 958,002 ops/s
+                 gc.alloc.rate:      0,055 MB/sec
+                 gc.alloc.rate.norm: 60,512 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   2: 980,549 ops/s
+                 gc.alloc.rate:      0,057 MB/sec
+                 gc.alloc.rate.norm: 60,640 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   3: 945,493 ops/s
+                 gc.alloc.rate:      0,054 MB/sec
+                 gc.alloc.rate.norm: 60,448 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   4: 909,350 ops/s
+                 gc.alloc.rate:      0,052 MB/sec
+                 gc.alloc.rate.norm: 60,512 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   5: 912,940 ops/s
+                 gc.alloc.rate:      0,053 MB/sec
+                 gc.alloc.rate.norm: 60,512 B/op
+                 gc.count:           ≈ 0 counts
+
+
+Result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput":
+  941,267 ±(99.9%) 116,512 ops/s [Average]
+  (min, avg, max) = (909,350, 941,267, 980,549), stdev = 30,258
+  CI (99.9%): [824,755, 1057,778] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput:gc.alloc.rate":
+  0,054 ±(99.9%) 0,007 MB/sec [Average]
+  (min, avg, max) = (0,052, 0,054, 0,057), stdev = 0,002
+  CI (99.9%): [0,047, 0,061] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput:gc.alloc.rate.norm":
+  60,525 ±(99.9%) 0,270 B/op [Average]
+  (min, avg, max) = (60,448, 60,525, 60,640), stdev = 0,070
+  CI (99.9%): [60,255, 60,795] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput:gc.count":
+  ≈ 0 counts
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.2, OpenJDK 64-Bit Server VM, 25.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: --enable-native-access=ALL-UNNAMED -Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf -Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec -Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 500 ms each
+# Measurement: 5 iterations, 500 ms each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput
+# Parameters: (radius = 1.0, size = 10000)
+
+# Run progress: 7,14% complete, ETA 00:02:54
+# Fork: N/A, test runs in the host VM
+# *** WARNING: Non-forked runs may silently omit JVM options, mess up profilers, disable compiler hints, etc. ***
+# *** WARNING: Use non-forked runs only for debugging purposes, not for actual performance runs. ***
+# Warmup Iteration   1: 100387,003 ops/s
+# Warmup Iteration   2: 99383,511 ops/s
+# Warmup Iteration   3: 101202,169 ops/s
+Iteration   1: 100476,335 ops/s
+                 gc.alloc.rate:      4,416 MB/sec
+                 gc.alloc.rate.norm: 46,088 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   2: 101836,925 ops/s
+                 gc.alloc.rate:      4,475 MB/sec
+                 gc.alloc.rate.norm: 46,088 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   3: 101404,635 ops/s
+                 gc.alloc.rate:      4,456 MB/sec
+                 gc.alloc.rate.norm: 46,087 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   4: 98151,328 ops/s
+                 gc.alloc.rate:      4,314 MB/sec
+                 gc.alloc.rate.norm: 46,091 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   5: 100484,006 ops/s
+                 gc.alloc.rate:      4,416 MB/sec
+                 gc.alloc.rate.norm: 46,088 B/op
+                 gc.count:           ≈ 0 counts
+
+
+Result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput":
+  100470,646 ±(99.9%) 5485,816 ops/s [Average]
+  (min, avg, max) = (98151,328, 100470,646, 101836,925), stdev = 1424,649
+  CI (99.9%): [94984,829, 105956,462] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput:gc.alloc.rate":
+  4,415 ±(99.9%) 0,241 MB/sec [Average]
+  (min, avg, max) = (4,314, 4,415, 4,475), stdev = 0,063
+  CI (99.9%): [4,175, 4,656] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput:gc.alloc.rate.norm":
+  46,088 ±(99.9%) 0,006 B/op [Average]
+  (min, avg, max) = (46,087, 46,088, 46,091), stdev = 0,001
+  CI (99.9%): [46,083, 46,094] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput:gc.count":
+  ≈ 0 counts
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.2, OpenJDK 64-Bit Server VM, 25.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: --enable-native-access=ALL-UNNAMED -Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf -Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec -Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 500 ms each
+# Measurement: 5 iterations, 500 ms each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput
+# Parameters: (radius = 1.0, size = 100000)
+
+# Run progress: 9,52% complete, ETA 00:02:45
+# Fork: N/A, test runs in the host VM
+# *** WARNING: Non-forked runs may silently omit JVM options, mess up profilers, disable compiler hints, etc. ***
+# *** WARNING: Use non-forked runs only for debugging purposes, not for actual performance runs. ***
+# Warmup Iteration   1: 9742,124 ops/s
+# Warmup Iteration   2: 9594,099 ops/s
+# Warmup Iteration   3: 10279,556 ops/s
+Iteration   1: 10224,401 ops/s
+                 gc.alloc.rate:      0,793 MB/sec
+                 gc.alloc.rate.norm: 81,343 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   2: 10107,616 ops/s
+                 gc.alloc.rate:      0,784 MB/sec
+                 gc.alloc.rate.norm: 81,343 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   3: 9963,805 ops/s
+                 gc.alloc.rate:      0,773 MB/sec
+                 gc.alloc.rate.norm: 81,343 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   4: 10110,623 ops/s
+                 gc.alloc.rate:      0,784 MB/sec
+                 gc.alloc.rate.norm: 81,343 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   5: 9832,915 ops/s
+                 gc.alloc.rate:      0,764 MB/sec
+                 gc.alloc.rate.norm: 81,469 B/op
+                 gc.count:           ≈ 0 counts
+
+
+Result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput":
+  10047,872 ±(99.9%) 583,799 ops/s [Average]
+  (min, avg, max) = (9832,915, 10047,872, 10224,401), stdev = 151,611
+  CI (99.9%): [9464,073, 10631,671] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput:gc.alloc.rate":
+  0,780 ±(99.9%) 0,044 MB/sec [Average]
+  (min, avg, max) = (0,764, 0,780, 0,793), stdev = 0,011
+  CI (99.9%): [0,736, 0,823] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput:gc.alloc.rate.norm":
+  81,368 ±(99.9%) 0,217 B/op [Average]
+  (min, avg, max) = (81,343, 81,368, 81,469), stdev = 0,056
+  CI (99.9%): [81,150, 81,585] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput:gc.count":
+  ≈ 0 counts
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.2, OpenJDK 64-Bit Server VM, 25.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: --enable-native-access=ALL-UNNAMED -Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf -Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec -Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 500 ms each
+# Measurement: 5 iterations, 500 ms each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput
+# Parameters: (radius = 1.0, size = 1000000)
+
+# Run progress: 11,90% complete, ETA 00:02:40
+# Fork: N/A, test runs in the host VM
+# *** WARNING: Non-forked runs may silently omit JVM options, mess up profilers, disable compiler hints, etc. ***
+# *** WARNING: Use non-forked runs only for debugging purposes, not for actual performance runs. ***
+# Warmup Iteration   1: 835,454 ops/s
+# Warmup Iteration   2: 863,318 ops/s
+# Warmup Iteration   3: 845,805 ops/s
+Iteration   1: 841,128 ops/s
+                 gc.alloc.rate:      0,625 MB/sec
+                 gc.alloc.rate.norm: 779,168 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   2: 868,300 ops/s
+                 gc.alloc.rate:      0,645 MB/sec
+                 gc.alloc.rate.norm: 779,168 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   3: 891,876 ops/s
+                 gc.alloc.rate:      0,663 MB/sec
+                 gc.alloc.rate.norm: 779,168 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   4: 837,147 ops/s
+                 gc.alloc.rate:      0,622 MB/sec
+                 gc.alloc.rate.norm: 779,168 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   5: 877,026 ops/s
+                 gc.alloc.rate:      0,652 MB/sec
+                 gc.alloc.rate.norm: 779,168 B/op
+                 gc.count:           ≈ 0 counts
+
+
+Result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput":
+  863,095 ±(99.9%) 90,415 ops/s [Average]
+  (min, avg, max) = (837,147, 863,095, 891,876), stdev = 23,480
+  CI (99.9%): [772,681, 953,510] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput:gc.alloc.rate":
+  0,641 ±(99.9%) 0,067 MB/sec [Average]
+  (min, avg, max) = (0,622, 0,641, 0,663), stdev = 0,017
+  CI (99.9%): [0,574, 0,708] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput:gc.alloc.rate.norm":
+  779,168 ±(99.9%) 0,001 B/op [Average]
+  (min, avg, max) = (779,168, 779,168, 779,168), stdev = 0,001
+  CI (99.9%): [779,168, 779,168] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput:gc.count":
+  ≈ 0 counts
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.2, OpenJDK 64-Bit Server VM, 25.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: --enable-native-access=ALL-UNNAMED -Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf -Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec -Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 500 ms each
+# Measurement: 5 iterations, 500 ms each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput
+# Parameters: (radius = 10.0, size = 10000)
+
+# Run progress: 14,29% complete, ETA 00:02:40
+# Fork: N/A, test runs in the host VM
+# *** WARNING: Non-forked runs may silently omit JVM options, mess up profilers, disable compiler hints, etc. ***
+# *** WARNING: Use non-forked runs only for debugging purposes, not for actual performance runs. ***
+# Warmup Iteration   1: 88233,723 ops/s
+# Warmup Iteration   2: 84850,411 ops/s
+# Warmup Iteration   3: 84209,791 ops/s
+Iteration   1: 83781,950 ops/s
+                 gc.alloc.rate:      59,508 MB/sec
+                 gc.alloc.rate.norm: 744,883 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   2: 81170,010 ops/s
+                 gc.alloc.rate:      57,652 MB/sec
+                 gc.alloc.rate.norm: 744,892 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   3: 85824,032 ops/s
+                 gc.alloc.rate:      60,958 MB/sec
+                 gc.alloc.rate.norm: 744,881 B/op
+                 gc.count:           1,000 counts
+                 gc.time:            2,000 ms
+
+Iteration   4: 84590,746 ops/s
+                 gc.alloc.rate:      60,082 MB/sec
+                 gc.alloc.rate.norm: 744,881 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   5: 85498,658 ops/s
+                 gc.alloc.rate:      60,725 MB/sec
+                 gc.alloc.rate.norm: 744,881 B/op
+                 gc.count:           3,000 counts
+                 gc.time:            1,000 ms
+
+
+Result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput":
+  84173,079 ±(99.9%) 7159,677 ops/s [Average]
+  (min, avg, max) = (81170,010, 84173,079, 85824,032), stdev = 1859,345
+  CI (99.9%): [77013,403, 91332,756] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput:gc.alloc.rate":
+  59,785 ±(99.9%) 5,083 MB/sec [Average]
+  (min, avg, max) = (57,652, 59,785, 60,958), stdev = 1,320
+  CI (99.9%): [54,702, 64,868] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput:gc.alloc.rate.norm":
+  744,884 ±(99.9%) 0,017 B/op [Average]
+  (min, avg, max) = (744,881, 744,884, 744,892), stdev = 0,005
+  CI (99.9%): [744,866, 744,901] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput:gc.count":
+  4,000 ±(99.9%) 0,001 counts [Sum]
+  (min, avg, max) = (≈ 0, 0,800, 3,000), stdev = 1,304
+  CI (99.9%): [4,000, 4,000] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput:gc.time":
+  3,000 ±(99.9%) 0,001 ms [Sum]
+  (min, avg, max) = (≈ 0, 0,600, 2,000), stdev = 0,894
+  CI (99.9%): [3,000, 3,000] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.2, OpenJDK 64-Bit Server VM, 25.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: --enable-native-access=ALL-UNNAMED -Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf -Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec -Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 500 ms each
+# Measurement: 5 iterations, 500 ms each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput
+# Parameters: (radius = 10.0, size = 100000)
+
+# Run progress: 16,67% complete, ETA 00:02:33
+# Fork: N/A, test runs in the host VM
+# *** WARNING: Non-forked runs may silently omit JVM options, mess up profilers, disable compiler hints, etc. ***
+# *** WARNING: Use non-forked runs only for debugging purposes, not for actual performance runs. ***
+# Warmup Iteration   1: 9457,781 ops/s
+# Warmup Iteration   2: 9615,272 ops/s
+# Warmup Iteration   3: 8429,408 ops/s
+Iteration   1: 6947,060 ops/s
+                 gc.alloc.rate:      43,721 MB/sec
+                 gc.alloc.rate.norm: 6600,648 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   2: 5743,742 ops/s
+                 gc.alloc.rate:      36,152 MB/sec
+                 gc.alloc.rate.norm: 6601,227 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   3: 6729,636 ops/s
+                 gc.alloc.rate:      42,356 MB/sec
+                 gc.alloc.rate.norm: 6600,896 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   4: 7188,487 ops/s
+                 gc.alloc.rate:      45,242 MB/sec
+                 gc.alloc.rate.norm: 6600,648 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   5: 6685,325 ops/s
+                 gc.alloc.rate:      42,077 MB/sec
+                 gc.alloc.rate.norm: 6600,912 B/op
+                 gc.count:           1,000 counts
+                 gc.time:            2,000 ms
+
+
+Result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput":
+  6658,850 ±(99.9%) 2114,977 ops/s [Average]
+  (min, avg, max) = (5743,742, 6658,850, 7188,487), stdev = 549,253
+  CI (99.9%): [4543,873, 8773,827] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput:gc.alloc.rate":
+  41,910 ±(99.9%) 13,307 MB/sec [Average]
+  (min, avg, max) = (36,152, 41,910, 45,242), stdev = 3,456
+  CI (99.9%): [28,603, 55,217] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput:gc.alloc.rate.norm":
+  6600,866 ±(99.9%) 0,920 B/op [Average]
+  (min, avg, max) = (6600,648, 6600,866, 6601,227), stdev = 0,239
+  CI (99.9%): [6599,947, 6601,786] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput:gc.count":
+  1,000 ±(99.9%) 0,001 counts [Sum]
+  (min, avg, max) = (≈ 0, 0,200, 1,000), stdev = 0,447
+  CI (99.9%): [1,000, 1,000] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput:gc.time":
+  2,000 ±(99.9%) 0,001 ms [Sum]
+  (min, avg, max) = (≈ 0, 0,400, 2,000), stdev = 0,894
+  CI (99.9%): [2,000, 2,000] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.2, OpenJDK 64-Bit Server VM, 25.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: --enable-native-access=ALL-UNNAMED -Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf -Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec -Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 500 ms each
+# Measurement: 5 iterations, 500 ms each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput
+# Parameters: (radius = 10.0, size = 1000000)
+
+# Run progress: 19,05% complete, ETA 00:02:29
+# Fork: N/A, test runs in the host VM
+# *** WARNING: Non-forked runs may silently omit JVM options, mess up profilers, disable compiler hints, etc. ***
+# *** WARNING: Use non-forked runs only for debugging purposes, not for actual performance runs. ***
+# Warmup Iteration   1: 927,238 ops/s
+# Warmup Iteration   2: 881,072 ops/s
+# Warmup Iteration   3: 921,949 ops/s
+Iteration   1: 801,808 ops/s
+                 gc.alloc.rate:      55,980 MB/sec
+                 gc.alloc.rate.norm: 73220,624 B/op
+                 gc.count:           1,000 counts
+                 gc.time:            9,000 ms
+
+Iteration   2: 764,397 ops/s
+                 gc.alloc.rate:      53,368 MB/sec
+                 gc.alloc.rate.norm: 73220,576 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   3: 738,361 ops/s
+                 gc.alloc.rate:      51,551 MB/sec
+                 gc.alloc.rate.norm: 73220,512 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   4: 739,570 ops/s
+                 gc.alloc.rate:      51,634 MB/sec
+                 gc.alloc.rate.norm: 73220,624 B/op
+                 gc.count:           3,000 counts
+                 gc.time:            ≈ 0 ms
+
+Iteration   5: 740,726 ops/s
+                 gc.alloc.rate:      51,715 MB/sec
+                 gc.alloc.rate.norm: 73220,512 B/op
+                 gc.count:           ≈ 0 counts
+
+
+Result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput":
+  756,972 ±(99.9%) 105,076 ops/s [Average]
+  (min, avg, max) = (738,361, 756,972, 801,808), stdev = 27,288
+  CI (99.9%): [651,896, 862,049] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput:gc.alloc.rate":
+  52,849 ±(99.9%) 7,336 MB/sec [Average]
+  (min, avg, max) = (51,551, 52,849, 55,980), stdev = 1,905
+  CI (99.9%): [45,513, 60,186] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput:gc.alloc.rate.norm":
+  73220,570 ±(99.9%) 0,216 B/op [Average]
+  (min, avg, max) = (73220,512, 73220,570, 73220,624), stdev = 0,056
+  CI (99.9%): [73220,354, 73220,786] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput:gc.count":
+  4,000 ±(99.9%) 0,001 counts [Sum]
+  (min, avg, max) = (≈ 0, 0,800, 3,000), stdev = 1,304
+  CI (99.9%): [4,000, 4,000] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput:gc.time":
+  9,000 ±(99.9%) 0,001 ms [Sum]
+  (min, avg, max) = (≈ 0, 1,800, 9,000), stdev = 4,025
+  CI (99.9%): [9,000, 9,000] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.2, OpenJDK 64-Bit Server VM, 25.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: --enable-native-access=ALL-UNNAMED -Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf -Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec -Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 500 ms each
+# Measurement: 5 iterations, 500 ms each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput
+# Parameters: (radius = 0.1, size = 10000)
+
+# Run progress: 21,43% complete, ETA 00:02:27
+# Fork: N/A, test runs in the host VM
+# *** WARNING: Non-forked runs may silently omit JVM options, mess up profilers, disable compiler hints, etc. ***
+# *** WARNING: Use non-forked runs only for debugging purposes, not for actual performance runs. ***
+# Warmup Iteration   1: 15352096,061 ops/s
+# Warmup Iteration   2: 14731576,888 ops/s
+# Warmup Iteration   3: 15310093,757 ops/s
+Iteration   1: 16175489,568 ops/s
+                 gc.alloc.rate:      4620,517 MB/sec
+                 gc.alloc.rate.norm: 299,585 B/op
+                 gc.count:           39,000 counts
+                 gc.time:            14,000 ms
+
+Iteration   2: 17003070,984 ops/s
+                 gc.alloc.rate:      4857,106 MB/sec
+                 gc.alloc.rate.norm: 299,585 B/op
+                 gc.count:           19,000 counts
+                 gc.time:            3,000 ms
+
+Iteration   3: 17022371,935 ops/s
+                 gc.alloc.rate:      4862,677 MB/sec
+                 gc.alloc.rate.norm: 299,585 B/op
+                 gc.count:           19,000 counts
+                 gc.time:            3,000 ms
+
+Iteration   4: 16952171,367 ops/s
+                 gc.alloc.rate:      4842,556 MB/sec
+                 gc.alloc.rate.norm: 299,585 B/op
+                 gc.count:           18,000 counts
+                 gc.time:            3,000 ms
+
+Iteration   5: 17061129,018 ops/s
+                 gc.alloc.rate:      4873,597 MB/sec
+                 gc.alloc.rate.norm: 299,585 B/op
+                 gc.count:           19,000 counts
+                 gc.time:            4,000 ms
+
+
+Result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput":
+  16842846,575 ±(99.9%) 1444460,823 ops/s [Average]
+  (min, avg, max) = (16175489,568, 16842846,575, 17061129,018), stdev = 375121,889
+  CI (99.9%): [15398385,751, 18287307,398] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput:gc.alloc.rate":
+  4811,291 ±(99.9%) 412,908 MB/sec [Average]
+  (min, avg, max) = (4620,517, 4811,291, 4873,597), stdev = 107,231
+  CI (99.9%): [4398,383, 5224,198] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput:gc.alloc.rate.norm":
+  299,585 ±(99.9%) 0,001 B/op [Average]
+  (min, avg, max) = (299,585, 299,585, 299,585), stdev = 0,001
+  CI (99.9%): [299,585, 299,585] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput:gc.count":
+  114,000 ±(99.9%) 0,001 counts [Sum]
+  (min, avg, max) = (18,000, 22,800, 39,000), stdev = 9,066
+  CI (99.9%): [114,000, 114,000] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput:gc.time":
+  27,000 ±(99.9%) 0,001 ms [Sum]
+  (min, avg, max) = (3,000, 5,400, 14,000), stdev = 4,827
+  CI (99.9%): [27,000, 27,000] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.2, OpenJDK 64-Bit Server VM, 25.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: --enable-native-access=ALL-UNNAMED -Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf -Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec -Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 500 ms each
+# Measurement: 5 iterations, 500 ms each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput
+# Parameters: (radius = 0.1, size = 100000)
+
+# Run progress: 23,81% complete, ETA 00:02:21
+# Fork: N/A, test runs in the host VM
+# *** WARNING: Non-forked runs may silently omit JVM options, mess up profilers, disable compiler hints, etc. ***
+# *** WARNING: Use non-forked runs only for debugging purposes, not for actual performance runs. ***
+# Warmup Iteration   1: 11087515,295 ops/s
+# Warmup Iteration   2: 10869459,393 ops/s
+# Warmup Iteration   3: 11761072,994 ops/s
+Iteration   1: 11646328,409 ops/s
+                 gc.alloc.rate:      4008,826 MB/sec
+                 gc.alloc.rate.norm: 360,993 B/op
+                 gc.count:           6,000 counts
+                 gc.time:            1,000 ms
+
+Iteration   2: 11434805,227 ops/s
+                 gc.alloc.rate:      3935,971 MB/sec
+                 gc.alloc.rate.norm: 360,993 B/op
+                 gc.count:           6,000 counts
+                 gc.time:            2,000 ms
+
+Iteration   3: 11644864,780 ops/s
+                 gc.alloc.rate:      4008,358 MB/sec
+                 gc.alloc.rate.norm: 360,993 B/op
+                 gc.count:           6,000 counts
+                 gc.time:            2,000 ms
+
+Iteration   4: 11932375,615 ops/s
+                 gc.alloc.rate:      4107,366 MB/sec
+                 gc.alloc.rate.norm: 360,993 B/op
+                 gc.count:           6,000 counts
+                 gc.time:            2,000 ms
+
+Iteration   5: 11631422,809 ops/s
+                 gc.alloc.rate:      4003,676 MB/sec
+                 gc.alloc.rate.norm: 360,993 B/op
+                 gc.count:           6,000 counts
+                 gc.time:            2,000 ms
+
+
+Result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput":
+  11657959,368 ±(99.9%) 683727,843 ops/s [Average]
+  (min, avg, max) = (11434805,227, 11657959,368, 11932375,615), stdev = 177561,950
+  CI (99.9%): [10974231,525, 12341687,211] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput:gc.alloc.rate":
+  4012,839 ±(99.9%) 235,521 MB/sec [Average]
+  (min, avg, max) = (3935,971, 4012,839, 4107,366), stdev = 61,164
+  CI (99.9%): [3777,318, 4248,360] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput:gc.alloc.rate.norm":
+  360,993 ±(99.9%) 0,001 B/op [Average]
+  (min, avg, max) = (360,993, 360,993, 360,993), stdev = 0,001
+  CI (99.9%): [360,993, 360,993] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput:gc.count":
+  30,000 ±(99.9%) 0,001 counts [Sum]
+  (min, avg, max) = (6,000, 6,000, 6,000), stdev = 0,001
+  CI (99.9%): [30,000, 30,000] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput:gc.time":
+  9,000 ±(99.9%) 0,001 ms [Sum]
+  (min, avg, max) = (1,000, 1,800, 2,000), stdev = 0,447
+  CI (99.9%): [9,000, 9,000] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.2, OpenJDK 64-Bit Server VM, 25.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: --enable-native-access=ALL-UNNAMED -Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf -Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec -Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 500 ms each
+# Measurement: 5 iterations, 500 ms each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput
+# Parameters: (radius = 0.1, size = 1000000)
+
+# Run progress: 26,19% complete, ETA 00:02:16
+# Fork: N/A, test runs in the host VM
+# *** WARNING: Non-forked runs may silently omit JVM options, mess up profilers, disable compiler hints, etc. ***
+# *** WARNING: Use non-forked runs only for debugging purposes, not for actual performance runs. ***
+# Warmup Iteration   1: 6536395,920 ops/s
+# Warmup Iteration   2: 6571094,756 ops/s
+# Warmup Iteration   3: 6883116,857 ops/s
+Iteration   1: 6997424,178 ops/s
+                 gc.alloc.rate:      3391,809 MB/sec
+                 gc.alloc.rate.norm: 508,370 B/op
+                 gc.count:           11,000 counts
+                 gc.time:            5,000 ms
+
+Iteration   2: 7111472,178 ops/s
+                 gc.alloc.rate:      3447,123 MB/sec
+                 gc.alloc.rate.norm: 508,370 B/op
+                 gc.count:           11,000 counts
+                 gc.time:            4,000 ms
+
+Iteration   3: 6992469,374 ops/s
+                 gc.alloc.rate:      3389,335 MB/sec
+                 gc.alloc.rate.norm: 508,370 B/op
+                 gc.count:           10,000 counts
+                 gc.time:            4,000 ms
+
+Iteration   4: 6069025,142 ops/s
+                 gc.alloc.rate:      2941,794 MB/sec
+                 gc.alloc.rate.norm: 508,370 B/op
+                 gc.count:           7,000 counts
+                 gc.time:            4,000 ms
+
+Iteration   5: 6995033,053 ops/s
+                 gc.alloc.rate:      3390,448 MB/sec
+                 gc.alloc.rate.norm: 508,370 B/op
+                 gc.count:           11,000 counts
+                 gc.time:            4,000 ms
+
+
+Result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput":
+  6833084,785 ±(99.9%) 1656140,425 ops/s [Average]
+  (min, avg, max) = (6069025,142, 6833084,785, 7111472,178), stdev = 430094,409
+  CI (99.9%): [5176944,360, 8489225,210] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput:gc.alloc.rate":
+  3312,102 ±(99.9%) 802,689 MB/sec [Average]
+  (min, avg, max) = (2941,794, 3312,102, 3447,123), stdev = 208,456
+  CI (99.9%): [2509,413, 4114,791] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput:gc.alloc.rate.norm":
+  508,370 ±(99.9%) 0,001 B/op [Average]
+  (min, avg, max) = (508,370, 508,370, 508,370), stdev = 0,001
+  CI (99.9%): [508,370, 508,371] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput:gc.count":
+  50,000 ±(99.9%) 0,001 counts [Sum]
+  (min, avg, max) = (7,000, 10,000, 11,000), stdev = 1,732
+  CI (99.9%): [50,000, 50,000] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput:gc.time":
+  21,000 ±(99.9%) 0,001 ms [Sum]
+  (min, avg, max) = (4,000, 4,200, 5,000), stdev = 0,447
+  CI (99.9%): [21,000, 21,000] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.2, OpenJDK 64-Bit Server VM, 25.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: --enable-native-access=ALL-UNNAMED -Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf -Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec -Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 500 ms each
+# Measurement: 5 iterations, 500 ms each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput
+# Parameters: (radius = 1.0, size = 10000)
+
+# Run progress: 28,57% complete, ETA 00:02:11
+# Fork: N/A, test runs in the host VM
+# *** WARNING: Non-forked runs may silently omit JVM options, mess up profilers, disable compiler hints, etc. ***
+# *** WARNING: Use non-forked runs only for debugging purposes, not for actual performance runs. ***
+# Warmup Iteration   1: 10779878,865 ops/s
+# Warmup Iteration   2: 11407666,597 ops/s
+# Warmup Iteration   3: 11644086,161 ops/s
+Iteration   1: 11447306,022 ops/s
+                 gc.alloc.rate:      4370,854 MB/sec
+                 gc.alloc.rate.norm: 400,433 B/op
+                 gc.count:           7,000 counts
+                 gc.time:            3,000 ms
+
+Iteration   2: 11621459,605 ops/s
+                 gc.alloc.rate:      4437,339 MB/sec
+                 gc.alloc.rate.norm: 400,433 B/op
+                 gc.count:           7,000 counts
+                 gc.time:            2,000 ms
+
+Iteration   3: 11714956,189 ops/s
+                 gc.alloc.rate:      4472,993 MB/sec
+                 gc.alloc.rate.norm: 400,433 B/op
+                 gc.count:           7,000 counts
+                 gc.time:            2,000 ms
+
+Iteration   4: 11293295,353 ops/s
+                 gc.alloc.rate:      4312,085 MB/sec
+                 gc.alloc.rate.norm: 400,433 B/op
+                 gc.count:           7,000 counts
+                 gc.time:            2,000 ms
+
+Iteration   5: 11521991,793 ops/s
+                 gc.alloc.rate:      4399,389 MB/sec
+                 gc.alloc.rate.norm: 400,433 B/op
+                 gc.count:           8,000 counts
+                 gc.time:            3,000 ms
+
+
+Result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput":
+  11519801,792 ±(99.9%) 623831,499 ops/s [Average]
+  (min, avg, max) = (11293295,353, 11519801,792, 11714956,189), stdev = 162007,059
+  CI (99.9%): [10895970,293, 12143633,292] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput:gc.alloc.rate":
+  4398,532 ±(99.9%) 238,074 MB/sec [Average]
+  (min, avg, max) = (4312,085, 4398,532, 4472,993), stdev = 61,827
+  CI (99.9%): [4160,458, 4636,607] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput:gc.alloc.rate.norm":
+  400,433 ±(99.9%) 0,001 B/op [Average]
+  (min, avg, max) = (400,433, 400,433, 400,433), stdev = 0,001
+  CI (99.9%): [400,433, 400,433] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput:gc.count":
+  36,000 ±(99.9%) 0,001 counts [Sum]
+  (min, avg, max) = (7,000, 7,200, 8,000), stdev = 0,447
+  CI (99.9%): [36,000, 36,000] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput:gc.time":
+  12,000 ±(99.9%) 0,001 ms [Sum]
+  (min, avg, max) = (2,000, 2,400, 3,000), stdev = 0,548
+  CI (99.9%): [12,000, 12,000] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.2, OpenJDK 64-Bit Server VM, 25.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: --enable-native-access=ALL-UNNAMED -Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf -Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec -Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 500 ms each
+# Measurement: 5 iterations, 500 ms each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput
+# Parameters: (radius = 1.0, size = 100000)
+
+# Run progress: 30,95% complete, ETA 00:02:06
+# Fork: N/A, test runs in the host VM
+# *** WARNING: Non-forked runs may silently omit JVM options, mess up profilers, disable compiler hints, etc. ***
+# *** WARNING: Use non-forked runs only for debugging purposes, not for actual performance runs. ***
+# Warmup Iteration   1: 3952946,446 ops/s
+# Warmup Iteration   2: 4065949,161 ops/s
+# Warmup Iteration   3: 4050527,997 ops/s
+Iteration   1: 4031456,183 ops/s
+                 gc.alloc.rate:      2581,442 MB/sec
+                 gc.alloc.rate.norm: 671,555 B/op
+                 gc.count:           5,000 counts
+                 gc.time:            6,000 ms
+
+Iteration   2: 4174697,787 ops/s
+                 gc.alloc.rate:      2673,128 MB/sec
+                 gc.alloc.rate.norm: 671,555 B/op
+                 gc.count:           4,000 counts
+                 gc.time:            1,000 ms
+
+Iteration   3: 4094729,224 ops/s
+                 gc.alloc.rate:      2622,030 MB/sec
+                 gc.alloc.rate.norm: 671,555 B/op
+                 gc.count:           4,000 counts
+                 gc.time:            2,000 ms
+
+Iteration   4: 4051550,948 ops/s
+                 gc.alloc.rate:      2594,393 MB/sec
+                 gc.alloc.rate.norm: 671,555 B/op
+                 gc.count:           5,000 counts
+                 gc.time:            1,000 ms
+
+Iteration   5: 4127846,775 ops/s
+                 gc.alloc.rate:      2643,201 MB/sec
+                 gc.alloc.rate.norm: 671,555 B/op
+                 gc.count:           4,000 counts
+                 gc.time:            2,000 ms
+
+
+Result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput":
+  4096056,184 ±(99.9%) 222462,438 ops/s [Average]
+  (min, avg, max) = (4031456,183, 4096056,184, 4174697,787), stdev = 57772,789
+  CI (99.9%): [3873593,745, 4318518,622] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput:gc.alloc.rate":
+  2622,839 ±(99.9%) 142,359 MB/sec [Average]
+  (min, avg, max) = (2581,442, 2622,839, 2673,128), stdev = 36,970
+  CI (99.9%): [2480,480, 2765,198] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput:gc.alloc.rate.norm":
+  671,555 ±(99.9%) 0,001 B/op [Average]
+  (min, avg, max) = (671,555, 671,555, 671,555), stdev = 0,001
+  CI (99.9%): [671,555, 671,556] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput:gc.count":
+  22,000 ±(99.9%) 0,001 counts [Sum]
+  (min, avg, max) = (4,000, 4,400, 5,000), stdev = 0,548
+  CI (99.9%): [22,000, 22,000] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput:gc.time":
+  12,000 ±(99.9%) 0,001 ms [Sum]
+  (min, avg, max) = (1,000, 2,400, 6,000), stdev = 2,074
+  CI (99.9%): [12,000, 12,000] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.2, OpenJDK 64-Bit Server VM, 25.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: --enable-native-access=ALL-UNNAMED -Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf -Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec -Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 500 ms each
+# Measurement: 5 iterations, 500 ms each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput
+# Parameters: (radius = 1.0, size = 1000000)
+
+# Run progress: 33,33% complete, ETA 00:02:01
+# Fork: N/A, test runs in the host VM
+# *** WARNING: Non-forked runs may silently omit JVM options, mess up profilers, disable compiler hints, etc. ***
+# *** WARNING: Use non-forked runs only for debugging purposes, not for actual performance runs. ***
+# Warmup Iteration   1: 598601,894 ops/s
+# Warmup Iteration   2: 682661,728 ops/s
+# Warmup Iteration   3: 700864,828 ops/s
+Iteration   1: 663912,348 ops/s
+                 gc.alloc.rate:      2108,974 MB/sec
+                 gc.alloc.rate.norm: 3331,733 B/op
+                 gc.count:           7,000 counts
+                 gc.time:            3,000 ms
+
+Iteration   2: 684227,284 ops/s
+                 gc.alloc.rate:      2173,584 MB/sec
+                 gc.alloc.rate.norm: 3331,732 B/op
+                 gc.count:           6,000 counts
+                 gc.time:            3,000 ms
+
+Iteration   3: 706877,856 ops/s
+                 gc.alloc.rate:      2245,536 MB/sec
+                 gc.alloc.rate.norm: 3331,732 B/op
+                 gc.count:           7,000 counts
+                 gc.time:            2,000 ms
+
+Iteration   4: 685057,231 ops/s
+                 gc.alloc.rate:      2176,240 MB/sec
+                 gc.alloc.rate.norm: 3331,732 B/op
+                 gc.count:           8,000 counts
+                 gc.time:            4,000 ms
+
+Iteration   5: 624431,552 ops/s
+                 gc.alloc.rate:      1983,619 MB/sec
+                 gc.alloc.rate.norm: 3331,734 B/op
+                 gc.count:           5,000 counts
+                 gc.time:            2,000 ms
+
+
+Result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput":
+  672901,254 ±(99.9%) 119626,944 ops/s [Average]
+  (min, avg, max) = (624431,552, 672901,254, 706877,856), stdev = 31066,737
+  CI (99.9%): [553274,311, 792528,198] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput:gc.alloc.rate":
+  2137,591 ±(99.9%) 380,064 MB/sec [Average]
+  (min, avg, max) = (1983,619, 2137,591, 2245,536), stdev = 98,701
+  CI (99.9%): [1757,527, 2517,654] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput:gc.alloc.rate.norm":
+  3331,733 ±(99.9%) 0,004 B/op [Average]
+  (min, avg, max) = (3331,732, 3331,733, 3331,734), stdev = 0,001
+  CI (99.9%): [3331,729, 3331,736] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput:gc.count":
+  33,000 ±(99.9%) 0,001 counts [Sum]
+  (min, avg, max) = (5,000, 6,600, 8,000), stdev = 1,140
+  CI (99.9%): [33,000, 33,000] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput:gc.time":
+  14,000 ±(99.9%) 0,001 ms [Sum]
+  (min, avg, max) = (2,000, 2,800, 4,000), stdev = 0,837
+  CI (99.9%): [14,000, 14,000] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.2, OpenJDK 64-Bit Server VM, 25.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: --enable-native-access=ALL-UNNAMED -Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf -Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec -Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 500 ms each
+# Measurement: 5 iterations, 500 ms each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput
+# Parameters: (radius = 10.0, size = 10000)
+
+# Run progress: 35,71% complete, ETA 00:01:57
+# Fork: N/A, test runs in the host VM
+# *** WARNING: Non-forked runs may silently omit JVM options, mess up profilers, disable compiler hints, etc. ***
+# *** WARNING: Use non-forked runs only for debugging purposes, not for actual performance runs. ***
+# Warmup Iteration   1: 753287,167 ops/s
+# Warmup Iteration   2: 745730,163 ops/s
+# Warmup Iteration   3: 820882,999 ops/s
+Iteration   1: 867418,854 ops/s
+                 gc.alloc.rate:      2638,010 MB/sec
+                 gc.alloc.rate.norm: 3189,504 B/op
+                 gc.count:           21,000 counts
+                 gc.time:            4,000 ms
+
+Iteration   2: 827513,273 ops/s
+                 gc.alloc.rate:      2516,658 MB/sec
+                 gc.alloc.rate.norm: 3189,505 B/op
+                 gc.count:           20,000 counts
+                 gc.time:            4,000 ms
+
+Iteration   3: 879088,025 ops/s
+                 gc.alloc.rate:      2673,547 MB/sec
+                 gc.alloc.rate.norm: 3189,504 B/op
+                 gc.count:           21,000 counts
+                 gc.time:            5,000 ms
+
+Iteration   4: 863777,805 ops/s
+                 gc.alloc.rate:      2626,960 MB/sec
+                 gc.alloc.rate.norm: 3189,504 B/op
+                 gc.count:           21,000 counts
+                 gc.time:            4,000 ms
+
+Iteration   5: 855892,102 ops/s
+                 gc.alloc.rate:      2602,766 MB/sec
+                 gc.alloc.rate.norm: 3189,504 B/op
+                 gc.count:           20,000 counts
+                 gc.time:            4,000 ms
+
+
+Result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput":
+  858738,012 ±(99.9%) 74516,754 ops/s [Average]
+  (min, avg, max) = (827513,273, 858738,012, 879088,025), stdev = 19351,764
+  CI (99.9%): [784221,258, 933254,765] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput:gc.alloc.rate":
+  2611,588 ±(99.9%) 226,688 MB/sec [Average]
+  (min, avg, max) = (2516,658, 2611,588, 2673,547), stdev = 58,870
+  CI (99.9%): [2384,900, 2838,276] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput:gc.alloc.rate.norm":
+  3189,504 ±(99.9%) 0,002 B/op [Average]
+  (min, avg, max) = (3189,504, 3189,504, 3189,505), stdev = 0,001
+  CI (99.9%): [3189,503, 3189,506] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput:gc.count":
+  103,000 ±(99.9%) 0,001 counts [Sum]
+  (min, avg, max) = (20,000, 20,600, 21,000), stdev = 0,548
+  CI (99.9%): [103,000, 103,000] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput:gc.time":
+  21,000 ±(99.9%) 0,001 ms [Sum]
+  (min, avg, max) = (4,000, 4,200, 5,000), stdev = 0,447
+  CI (99.9%): [21,000, 21,000] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.2, OpenJDK 64-Bit Server VM, 25.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: --enable-native-access=ALL-UNNAMED -Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf -Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec -Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 500 ms each
+# Measurement: 5 iterations, 500 ms each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput
+# Parameters: (radius = 10.0, size = 100000)
+
+# Run progress: 38,10% complete, ETA 00:01:52
+# Fork: N/A, test runs in the host VM
+# *** WARNING: Non-forked runs may silently omit JVM options, mess up profilers, disable compiler hints, etc. ***
+# *** WARNING: Use non-forked runs only for debugging purposes, not for actual performance runs. ***
+# Warmup Iteration   1: 89545,461 ops/s
+# Warmup Iteration   2: 90784,875 ops/s
+# Warmup Iteration   3: 95002,811 ops/s
+Iteration   1: 95609,747 ops/s
+                 gc.alloc.rate:      2189,813 MB/sec
+                 gc.alloc.rate.norm: 24019,776 B/op
+                 gc.count:           16,000 counts
+                 gc.time:            3,000 ms
+
+Iteration   2: 95611,569 ops/s
+                 gc.alloc.rate:      2189,847 MB/sec
+                 gc.alloc.rate.norm: 24019,776 B/op
+                 gc.count:           15,000 counts
+                 gc.time:            3,000 ms
+
+Iteration   3: 95868,946 ops/s
+                 gc.alloc.rate:      2195,722 MB/sec
+                 gc.alloc.rate.norm: 24019,776 B/op
+                 gc.count:           15,000 counts
+                 gc.time:            4,000 ms
+
+Iteration   4: 91199,054 ops/s
+                 gc.alloc.rate:      2088,750 MB/sec
+                 gc.alloc.rate.norm: 24019,783 B/op
+                 gc.count:           15,000 counts
+                 gc.time:            3,000 ms
+
+Iteration   5: 94555,996 ops/s
+                 gc.alloc.rate:      2165,644 MB/sec
+                 gc.alloc.rate.norm: 24019,778 B/op
+                 gc.count:           16,000 counts
+                 gc.time:            4,000 ms
+
+
+Result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput":
+  94569,062 ±(99.9%) 7510,401 ops/s [Average]
+  (min, avg, max) = (91199,054, 94569,062, 95868,946), stdev = 1950,427
+  CI (99.9%): [87058,661, 102079,463] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput:gc.alloc.rate":
+  2165,955 ±(99.9%) 172,063 MB/sec [Average]
+  (min, avg, max) = (2088,750, 2165,955, 2195,722), stdev = 44,684
+  CI (99.9%): [1993,892, 2338,018] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput:gc.alloc.rate.norm":
+  24019,778 ±(99.9%) 0,010 B/op [Average]
+  (min, avg, max) = (24019,776, 24019,778, 24019,783), stdev = 0,003
+  CI (99.9%): [24019,768, 24019,788] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput:gc.count":
+  77,000 ±(99.9%) 0,001 counts [Sum]
+  (min, avg, max) = (15,000, 15,400, 16,000), stdev = 0,548
+  CI (99.9%): [77,000, 77,000] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput:gc.time":
+  17,000 ±(99.9%) 0,001 ms [Sum]
+  (min, avg, max) = (3,000, 3,400, 4,000), stdev = 0,548
+  CI (99.9%): [17,000, 17,000] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.2, OpenJDK 64-Bit Server VM, 25.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: --enable-native-access=ALL-UNNAMED -Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf -Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec -Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 500 ms each
+# Measurement: 5 iterations, 500 ms each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput
+# Parameters: (radius = 10.0, size = 1000000)
+
+# Run progress: 40,48% complete, ETA 00:01:47
+# Fork: N/A, test runs in the host VM
+# *** WARNING: Non-forked runs may silently omit JVM options, mess up profilers, disable compiler hints, etc. ***
+# *** WARNING: Use non-forked runs only for debugging purposes, not for actual performance runs. ***
+# Warmup Iteration   1: 5038,814 ops/s
+# Warmup Iteration   2: 5092,066 ops/s
+# Warmup Iteration   3: 5092,527 ops/s
+Iteration   1: 5126,326 ops/s
+                 gc.alloc.rate:      1109,833 MB/sec
+                 gc.alloc.rate.norm: 227060,541 B/op
+                 gc.count:           5,000 counts
+                 gc.time:            4,000 ms
+
+Iteration   2: 5083,626 ops/s
+                 gc.alloc.rate:      1100,604 MB/sec
+                 gc.alloc.rate.norm: 227060,541 B/op
+                 gc.count:           5,000 counts
+                 gc.time:            2,000 ms
+
+Iteration   3: 5121,904 ops/s
+                 gc.alloc.rate:      1108,900 MB/sec
+                 gc.alloc.rate.norm: 227060,541 B/op
+                 gc.count:           5,000 counts
+                 gc.time:            3,000 ms
+
+Iteration   4: 5164,254 ops/s
+                 gc.alloc.rate:      1118,034 MB/sec
+                 gc.alloc.rate.norm: 227060,541 B/op
+                 gc.count:           6,000 counts
+                 gc.time:            8,000 ms
+
+Iteration   5: 5321,709 ops/s
+                 gc.alloc.rate:      1152,109 MB/sec
+                 gc.alloc.rate.norm: 227060,541 B/op
+                 gc.count:           6,000 counts
+                 gc.time:            3,000 ms
+
+
+Result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput":
+  5163,564 ±(99.9%) 357,730 ops/s [Average]
+  (min, avg, max) = (5083,626, 5163,564, 5321,709), stdev = 92,901
+  CI (99.9%): [4805,833, 5521,294] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput:gc.alloc.rate":
+  1117,896 ±(99.9%) 77,385 MB/sec [Average]
+  (min, avg, max) = (1100,604, 1117,896, 1152,109), stdev = 20,097
+  CI (99.9%): [1040,512, 1195,281] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput:gc.alloc.rate.norm":
+  227060,541 ±(99.9%) 0,001 B/op [Average]
+  (min, avg, max) = (227060,541, 227060,541, 227060,541), stdev = 0,001
+  CI (99.9%): [227060,541, 227060,541] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput:gc.count":
+  27,000 ±(99.9%) 0,001 counts [Sum]
+  (min, avg, max) = (5,000, 5,400, 6,000), stdev = 0,548
+  CI (99.9%): [27,000, 27,000] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput:gc.time":
+  20,000 ±(99.9%) 0,001 ms [Sum]
+  (min, avg, max) = (2,000, 4,000, 8,000), stdev = 2,345
+  CI (99.9%): [20,000, 20,000] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.2, OpenJDK 64-Bit Server VM, 25.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: --enable-native-access=ALL-UNNAMED -Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf -Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec -Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 500 ms each
+# Measurement: 5 iterations, 500 ms each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: geosearch.benchmark.GeoIndexBenchmark.buildNaive
+# Parameters: (size = 10000)
+
+# Run progress: 42,86% complete, ETA 00:01:44
+# Fork: N/A, test runs in the host VM
+# *** WARNING: Non-forked runs may silently omit JVM options, mess up profilers, disable compiler hints, etc. ***
+# *** WARNING: Use non-forked runs only for debugging purposes, not for actual performance runs. ***
+# Warmup Iteration   1: 0,021 ms/op
+# Warmup Iteration   2: 0,020 ms/op
+# Warmup Iteration   3: 0,019 ms/op
+Iteration   1: 0,019 ms/op
+                 gc.alloc.rate:      8295,428 MB/sec
+                 gc.alloc.rate.norm: 168968,269 B/op
+                 gc.count:           14,000 counts
+                 gc.time:            5,000 ms
+
+Iteration   2: 0,028 ms/op
+                 gc.alloc.rate:      5757,829 MB/sec
+                 gc.alloc.rate.norm: 168968,388 B/op
+                 gc.count:           10,000 counts
+                 gc.time:            4,000 ms
+
+Iteration   3: 0,039 ms/op
+                 gc.alloc.rate:      4099,147 MB/sec
+                 gc.alloc.rate.norm: 168968,545 B/op
+                 gc.count:           7,000 counts
+                 gc.time:            2,000 ms
+
+Iteration   4: 0,039 ms/op
+                 gc.alloc.rate:      4126,064 MB/sec
+                 gc.alloc.rate.norm: 168968,541 B/op
+                 gc.count:           7,000 counts
+                 gc.time:            3,000 ms
+
+Iteration   5: 0,039 ms/op
+                 gc.alloc.rate:      4096,623 MB/sec
+                 gc.alloc.rate.norm: 168968,545 B/op
+                 gc.count:           6,000 counts
+                 gc.time:            2,000 ms
+
+
+Result "geosearch.benchmark.GeoIndexBenchmark.buildNaive":
+  0,033 ±(99.9%) 0,035 ms/op [Average]
+  (min, avg, max) = (0,019, 0,033, 0,039), stdev = 0,009
+  CI (99.9%): [≈ 0, 0,068] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.buildNaive:gc.alloc.rate":
+  5275,018 ±(99.9%) 7060,281 MB/sec [Average]
+  (min, avg, max) = (4096,623, 5275,018, 8295,428), stdev = 1833,532
+  CI (99.9%): [≈ 0, 12335,299] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.buildNaive:gc.alloc.rate.norm":
+  168968,458 ±(99.9%) 0,482 B/op [Average]
+  (min, avg, max) = (168968,269, 168968,458, 168968,545), stdev = 0,125
+  CI (99.9%): [168967,976, 168968,939] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.buildNaive:gc.count":
+  44,000 ±(99.9%) 0,001 counts [Sum]
+  (min, avg, max) = (6,000, 8,800, 14,000), stdev = 3,271
+  CI (99.9%): [44,000, 44,000] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.buildNaive:gc.time":
+  16,000 ±(99.9%) 0,001 ms [Sum]
+  (min, avg, max) = (2,000, 3,200, 5,000), stdev = 1,304
+  CI (99.9%): [16,000, 16,000] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.2, OpenJDK 64-Bit Server VM, 25.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: --enable-native-access=ALL-UNNAMED -Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf -Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec -Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 500 ms each
+# Measurement: 5 iterations, 500 ms each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: geosearch.benchmark.GeoIndexBenchmark.buildNaive
+# Parameters: (size = 100000)
+
+# Run progress: 45,24% complete, ETA 00:01:39
+# Fork: N/A, test runs in the host VM
+# *** WARNING: Non-forked runs may silently omit JVM options, mess up profilers, disable compiler hints, etc. ***
+# *** WARNING: Use non-forked runs only for debugging purposes, not for actual performance runs. ***
+# Warmup Iteration   1: 0,394 ms/op
+# Warmup Iteration   2: 0,407 ms/op
+# Warmup Iteration   3: 0,400 ms/op
+Iteration   1: 0,394 ms/op
+                 gc.alloc.rate:      3099,798 MB/sec
+                 gc.alloc.rate.norm: 1280957,469 B/op
+                 gc.count:           5,000 counts
+                 gc.time:            2,000 ms
+
+Iteration   2: 0,401 ms/op
+                 gc.alloc.rate:      3048,163 MB/sec
+                 gc.alloc.rate.norm: 1280957,557 B/op
+                 gc.count:           5,000 counts
+                 gc.time:            2,000 ms
+
+Iteration   3: 0,445 ms/op
+                 gc.alloc.rate:      2746,975 MB/sec
+                 gc.alloc.rate.norm: 1280958,162 B/op
+                 gc.count:           5,000 counts
+                 gc.time:            2,000 ms
+
+Iteration   4: 0,416 ms/op
+                 gc.alloc.rate:      2933,311 MB/sec
+                 gc.alloc.rate.norm: 1280957,780 B/op
+                 gc.count:           5,000 counts
+                 gc.time:            2,000 ms
+
+Iteration   5: 0,393 ms/op
+                 gc.alloc.rate:      3111,164 MB/sec
+                 gc.alloc.rate.norm: 1280957,456 B/op
+                 gc.count:           5,000 counts
+                 gc.time:            2,000 ms
+
+
+Result "geosearch.benchmark.GeoIndexBenchmark.buildNaive":
+  0,410 ±(99.9%) 0,084 ms/op [Average]
+  (min, avg, max) = (0,393, 0,410, 0,445), stdev = 0,022
+  CI (99.9%): [0,326, 0,493] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.buildNaive:gc.alloc.rate":
+  2987,882 ±(99.9%) 585,158 MB/sec [Average]
+  (min, avg, max) = (2746,975, 2987,882, 3111,164), stdev = 151,964
+  CI (99.9%): [2402,724, 3573,040] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.buildNaive:gc.alloc.rate.norm":
+  1280957,685 ±(99.9%) 1,143 B/op [Average]
+  (min, avg, max) = (1280957,456, 1280957,685, 1280958,162), stdev = 0,297
+  CI (99.9%): [1280956,542, 1280958,827] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.buildNaive:gc.count":
+  25,000 ±(99.9%) 0,001 counts [Sum]
+  (min, avg, max) = (5,000, 5,000, 5,000), stdev = 0,001
+  CI (99.9%): [25,000, 25,000] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.buildNaive:gc.time":
+  10,000 ±(99.9%) 0,001 ms [Sum]
+  (min, avg, max) = (2,000, 2,000, 2,000), stdev = 0,001
+  CI (99.9%): [10,000, 10,000] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.2, OpenJDK 64-Bit Server VM, 25.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: --enable-native-access=ALL-UNNAMED -Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf -Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec -Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 500 ms each
+# Measurement: 5 iterations, 500 ms each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: geosearch.benchmark.GeoIndexBenchmark.buildNaive
+# Parameters: (size = 300000)
+
+# Run progress: 47,62% complete, ETA 00:01:34
+# Fork: N/A, test runs in the host VM
+# *** WARNING: Non-forked runs may silently omit JVM options, mess up profilers, disable compiler hints, etc. ***
+# *** WARNING: Use non-forked runs only for debugging purposes, not for actual performance runs. ***
+# Warmup Iteration   1: 1,264 ms/op
+# Warmup Iteration   2: 1,363 ms/op
+# Warmup Iteration   3: 1,266 ms/op
+Iteration   1: 1,219 ms/op
+                 gc.alloc.rate:      3381,066 MB/sec
+                 gc.alloc.rate.norm: 4322256,949 B/op
+                 gc.count:           4,000 counts
+                 gc.time:            6,000 ms
+
+Iteration   2: 1,236 ms/op
+                 gc.alloc.rate:      3334,490 MB/sec
+                 gc.alloc.rate.norm: 4322257,115 B/op
+                 gc.count:           4,000 counts
+                 gc.time:            3,000 ms
+
+Iteration   3: 1,244 ms/op
+                 gc.alloc.rate:      3313,995 MB/sec
+                 gc.alloc.rate.norm: 4322257,199 B/op
+                 gc.count:           4,000 counts
+                 gc.time:            2,000 ms
+
+Iteration   4: 1,217 ms/op
+                 gc.alloc.rate:      3387,713 MB/sec
+                 gc.alloc.rate.norm: 4322256,827 B/op
+                 gc.count:           4,000 counts
+                 gc.time:            3,000 ms
+
+Iteration   5: 1,223 ms/op
+                 gc.alloc.rate:      3369,807 MB/sec
+                 gc.alloc.rate.norm: 4322256,949 B/op
+                 gc.count:           4,000 counts
+                 gc.time:            3,000 ms
+
+
+Result "geosearch.benchmark.GeoIndexBenchmark.buildNaive":
+  1,228 ±(99.9%) 0,045 ms/op [Average]
+  (min, avg, max) = (1,217, 1,228, 1,244), stdev = 0,012
+  CI (99.9%): [1,183, 1,273] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.buildNaive:gc.alloc.rate":
+  3357,414 ±(99.9%) 122,402 MB/sec [Average]
+  (min, avg, max) = (3313,995, 3357,414, 3387,713), stdev = 31,787
+  CI (99.9%): [3235,013, 3479,816] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.buildNaive:gc.alloc.rate.norm":
+  4322257,008 ±(99.9%) 0,570 B/op [Average]
+  (min, avg, max) = (4322256,827, 4322257,008, 4322257,199), stdev = 0,148
+  CI (99.9%): [4322256,438, 4322257,578] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.buildNaive:gc.count":
+  20,000 ±(99.9%) 0,001 counts [Sum]
+  (min, avg, max) = (4,000, 4,000, 4,000), stdev = 0,001
+  CI (99.9%): [20,000, 20,000] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.buildNaive:gc.time":
+  17,000 ±(99.9%) 0,001 ms [Sum]
+  (min, avg, max) = (2,000, 3,400, 6,000), stdev = 1,517
+  CI (99.9%): [17,000, 17,000] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.2, OpenJDK 64-Bit Server VM, 25.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: --enable-native-access=ALL-UNNAMED -Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf -Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec -Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 500 ms each
+# Measurement: 5 iterations, 500 ms each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: geosearch.benchmark.GeoIndexBenchmark.buildQuadtree
+# Parameters: (size = 10000)
+
+# Run progress: 50,00% complete, ETA 00:01:30
+# Fork: N/A, test runs in the host VM
+# *** WARNING: Non-forked runs may silently omit JVM options, mess up profilers, disable compiler hints, etc. ***
+# *** WARNING: Use non-forked runs only for debugging purposes, not for actual performance runs. ***
+# Warmup Iteration   1: 0,607 ms/op
+# Warmup Iteration   2: 0,591 ms/op
+# Warmup Iteration   3: 0,578 ms/op
+Iteration   1: 0,604 ms/op
+                 gc.alloc.rate:      1030,792 MB/sec
+                 gc.alloc.rate.norm: 653264,373 B/op
+                 gc.count:           1,000 counts
+                 gc.time:            ≈ 0 ms
+
+Iteration   2: 0,585 ms/op
+                 gc.alloc.rate:      1065,102 MB/sec
+                 gc.alloc.rate.norm: 653264,102 B/op
+                 gc.count:           1,000 counts
+                 gc.time:            1,000 ms
+
+Iteration   3: 0,580 ms/op
+                 gc.alloc.rate:      1074,229 MB/sec
+                 gc.alloc.rate.norm: 653264,065 B/op
+                 gc.count:           1,000 counts
+                 gc.time:            ≈ 0 ms
+
+Iteration   4: 0,552 ms/op
+                 gc.alloc.rate:      1128,730 MB/sec
+                 gc.alloc.rate.norm: 653263,675 B/op
+                 gc.count:           1,000 counts
+                 gc.time:            1,000 ms
+
+Iteration   5: 0,565 ms/op
+                 gc.alloc.rate:      1101,925 MB/sec
+                 gc.alloc.rate.norm: 653263,830 B/op
+                 gc.count:           2,000 counts
+                 gc.time:            1,000 ms
+
+
+Result "geosearch.benchmark.GeoIndexBenchmark.buildQuadtree":
+  0,577 ±(99.9%) 0,077 ms/op [Average]
+  (min, avg, max) = (0,552, 0,577, 0,604), stdev = 0,020
+  CI (99.9%): [0,501, 0,654] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.buildQuadtree:gc.alloc.rate":
+  1080,156 ±(99.9%) 143,199 MB/sec [Average]
+  (min, avg, max) = (1030,792, 1080,156, 1128,730), stdev = 37,188
+  CI (99.9%): [936,956, 1223,355] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.buildQuadtree:gc.alloc.rate.norm":
+  653264,009 ±(99.9%) 1,033 B/op [Average]
+  (min, avg, max) = (653263,675, 653264,009, 653264,373), stdev = 0,268
+  CI (99.9%): [653262,976, 653265,042] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.buildQuadtree:gc.count":
+  6,000 ±(99.9%) 0,001 counts [Sum]
+  (min, avg, max) = (1,000, 1,200, 2,000), stdev = 0,447
+  CI (99.9%): [6,000, 6,000] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.buildQuadtree:gc.time":
+  3,000 ±(99.9%) 0,001 ms [Sum]
+  (min, avg, max) = (≈ 0, 0,600, 1,000), stdev = 0,548
+  CI (99.9%): [3,000, 3,000] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.2, OpenJDK 64-Bit Server VM, 25.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: --enable-native-access=ALL-UNNAMED -Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf -Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec -Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 500 ms each
+# Measurement: 5 iterations, 500 ms each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: geosearch.benchmark.GeoIndexBenchmark.buildQuadtree
+# Parameters: (size = 100000)
+
+# Run progress: 52,38% complete, ETA 00:01:25
+# Fork: N/A, test runs in the host VM
+# *** WARNING: Non-forked runs may silently omit JVM options, mess up profilers, disable compiler hints, etc. ***
+# *** WARNING: Use non-forked runs only for debugging purposes, not for actual performance runs. ***
+# Warmup Iteration   1: 10,422 ms/op
+# Warmup Iteration   2: 10,824 ms/op
+# Warmup Iteration   3: 11,012 ms/op
+Iteration   1: 10,561 ms/op
+                 gc.alloc.rate:      480,454 MB/sec
+                 gc.alloc.rate.norm: 5321465,833 B/op
+                 gc.count:           1,000 counts
+                 gc.time:            1,000 ms
+
+Iteration   2: 10,808 ms/op
+                 gc.alloc.rate:      469,473 MB/sec
+                 gc.alloc.rate.norm: 5321467,745 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   3: 10,448 ms/op
+                 gc.alloc.rate:      485,679 MB/sec
+                 gc.alloc.rate.norm: 5321462,857 B/op
+                 gc.count:           1,000 counts
+                 gc.time:            ≈ 0 ms
+
+Iteration   4: 10,451 ms/op
+                 gc.alloc.rate:      485,500 MB/sec
+                 gc.alloc.rate.norm: 5321462,857 B/op
+                 gc.count:           1,000 counts
+                 gc.time:            1,000 ms
+
+Iteration   5: 10,381 ms/op
+                 gc.alloc.rate:      488,794 MB/sec
+                 gc.alloc.rate.norm: 5321461,714 B/op
+                 gc.count:           ≈ 0 counts
+
+
+Result "geosearch.benchmark.GeoIndexBenchmark.buildQuadtree":
+  10,530 ±(99.9%) 0,649 ms/op [Average]
+  (min, avg, max) = (10,381, 10,530, 10,808), stdev = 0,168
+  CI (99.9%): [9,881, 11,179] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.buildQuadtree:gc.alloc.rate":
+  481,980 ±(99.9%) 29,278 MB/sec [Average]
+  (min, avg, max) = (469,473, 481,980, 488,794), stdev = 7,603
+  CI (99.9%): [452,702, 511,258] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.buildQuadtree:gc.alloc.rate.norm":
+  5321464,201 ±(99.9%) 9,630 B/op [Average]
+  (min, avg, max) = (5321461,714, 5321464,201, 5321467,745), stdev = 2,501
+  CI (99.9%): [5321454,571, 5321473,831] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.buildQuadtree:gc.count":
+  3,000 ±(99.9%) 0,001 counts [Sum]
+  (min, avg, max) = (≈ 0, 0,600, 1,000), stdev = 0,548
+  CI (99.9%): [3,000, 3,000] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.buildQuadtree:gc.time":
+  2,000 ±(99.9%) 0,001 ms [Sum]
+  (min, avg, max) = (≈ 0, 0,400, 1,000), stdev = 0,548
+  CI (99.9%): [2,000, 2,000] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.2, OpenJDK 64-Bit Server VM, 25.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: --enable-native-access=ALL-UNNAMED -Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf -Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec -Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 500 ms each
+# Measurement: 5 iterations, 500 ms each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: geosearch.benchmark.GeoIndexBenchmark.buildQuadtree
+# Parameters: (size = 300000)
+
+# Run progress: 54,76% complete, ETA 00:01:21
+# Fork: N/A, test runs in the host VM
+# *** WARNING: Non-forked runs may silently omit JVM options, mess up profilers, disable compiler hints, etc. ***
+# *** WARNING: Use non-forked runs only for debugging purposes, not for actual performance runs. ***
+# Warmup Iteration   1: 43,156 ms/op
+# Warmup Iteration   2: 43,623 ms/op
+# Warmup Iteration   3: 43,638 ms/op
+Iteration   1: 49,272 ms/op
+                 gc.alloc.rate:      310,672 MB/sec
+                 gc.alloc.rate.norm: 16053087,273 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   2: 49,911 ms/op
+                 gc.alloc.rate:      306,682 MB/sec
+                 gc.alloc.rate.norm: 16053087,273 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   3: 48,103 ms/op
+                 gc.alloc.rate:      318,206 MB/sec
+                 gc.alloc.rate.norm: 16053092,364 B/op
+                 gc.count:           1,000 counts
+                 gc.time:            3,000 ms
+
+Iteration   4: 47,877 ms/op
+                 gc.alloc.rate:      319,712 MB/sec
+                 gc.alloc.rate.norm: 16053087,273 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   5: 46,721 ms/op
+                 gc.alloc.rate:      327,601 MB/sec
+                 gc.alloc.rate.norm: 16053092,364 B/op
+                 gc.count:           1,000 counts
+                 gc.time:            2,000 ms
+
+
+Result "geosearch.benchmark.GeoIndexBenchmark.buildQuadtree":
+  48,377 ±(99.9%) 4,802 ms/op [Average]
+  (min, avg, max) = (46,721, 48,377, 49,911), stdev = 1,247
+  CI (99.9%): [43,575, 53,178] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.buildQuadtree:gc.alloc.rate":
+  316,575 ±(99.9%) 31,448 MB/sec [Average]
+  (min, avg, max) = (306,682, 316,575, 327,601), stdev = 8,167
+  CI (99.9%): [285,127, 348,022] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.buildQuadtree:gc.alloc.rate.norm":
+  16053089,309 ±(99.9%) 10,737 B/op [Average]
+  (min, avg, max) = (16053087,273, 16053089,309, 16053092,364), stdev = 2,788
+  CI (99.9%): [16053078,572, 16053100,046] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.buildQuadtree:gc.count":
+  2,000 ±(99.9%) 0,001 counts [Sum]
+  (min, avg, max) = (≈ 0, 0,400, 1,000), stdev = 0,548
+  CI (99.9%): [2,000, 2,000] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.buildQuadtree:gc.time":
+  5,000 ±(99.9%) 0,001 ms [Sum]
+  (min, avg, max) = (≈ 0, 1,000, 3,000), stdev = 1,414
+  CI (99.9%): [5,000, 5,000] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.2, OpenJDK 64-Bit Server VM, 25.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: --enable-native-access=ALL-UNNAMED -Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf -Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec -Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 500 ms each
+# Measurement: 5 iterations, 500 ms each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage
+# Parameters: (radius = 0.1, size = 10000)
+
+# Run progress: 57,14% complete, ETA 00:01:16
+# Fork: N/A, test runs in the host VM
+# *** WARNING: Non-forked runs may silently omit JVM options, mess up profilers, disable compiler hints, etc. ***
+# *** WARNING: Use non-forked runs only for debugging purposes, not for actual performance runs. ***
+# Warmup Iteration   1: 9,949 us/op
+# Warmup Iteration   2: 9,990 us/op
+# Warmup Iteration   3: 10,338 us/op
+Iteration   1: 9,828 us/op
+                 gc.alloc.rate:      2,352 MB/sec
+                 gc.alloc.rate.norm: 24,247 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   2: 9,876 us/op
+                 gc.alloc.rate:      2,341 MB/sec
+                 gc.alloc.rate.norm: 24,247 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   3: 9,870 us/op
+                 gc.alloc.rate:      2,343 MB/sec
+                 gc.alloc.rate.norm: 24,247 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   4: 10,337 us/op
+                 gc.alloc.rate:      2,237 MB/sec
+                 gc.alloc.rate.norm: 24,254 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   5: 9,664 us/op
+                 gc.alloc.rate:      2,392 MB/sec
+                 gc.alloc.rate.norm: 24,244 B/op
+                 gc.count:           ≈ 0 counts
+
+
+Result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage":
+  9,915 ±(99.9%) 0,968 us/op [Average]
+  (min, avg, max) = (9,664, 9,915, 10,337), stdev = 0,251
+  CI (99.9%): [8,947, 10,883] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage:gc.alloc.rate":
+  2,333 ±(99.9%) 0,221 MB/sec [Average]
+  (min, avg, max) = (2,237, 2,333, 2,392), stdev = 0,057
+  CI (99.9%): [2,112, 2,554] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage:gc.alloc.rate.norm":
+  24,248 ±(99.9%) 0,014 B/op [Average]
+  (min, avg, max) = (24,244, 24,248, 24,254), stdev = 0,004
+  CI (99.9%): [24,234, 24,261] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage:gc.count":
+  ≈ 0 counts
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.2, OpenJDK 64-Bit Server VM, 25.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: --enable-native-access=ALL-UNNAMED -Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf -Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec -Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 500 ms each
+# Measurement: 5 iterations, 500 ms each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage
+# Parameters: (radius = 0.1, size = 100000)
+
+# Run progress: 59,52% complete, ETA 00:01:12
+# Fork: N/A, test runs in the host VM
+# *** WARNING: Non-forked runs may silently omit JVM options, mess up profilers, disable compiler hints, etc. ***
+# *** WARNING: Use non-forked runs only for debugging purposes, not for actual performance runs. ***
+# Warmup Iteration   1: 95,540 us/op
+# Warmup Iteration   2: 96,746 us/op
+# Warmup Iteration   3: 101,217 us/op
+Iteration   1: 95,110 us/op
+                 gc.alloc.rate:      0,278 MB/sec
+                 gc.alloc.rate.norm: 27,727 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   2: 100,289 us/op
+                 gc.alloc.rate:      0,264 MB/sec
+                 gc.alloc.rate.norm: 27,727 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   3: 101,126 us/op
+                 gc.alloc.rate:      0,263 MB/sec
+                 gc.alloc.rate.norm: 27,853 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   4: 96,873 us/op
+                 gc.alloc.rate:      0,273 MB/sec
+                 gc.alloc.rate.norm: 27,727 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   5: 95,779 us/op
+                 gc.alloc.rate:      0,276 MB/sec
+                 gc.alloc.rate.norm: 27,727 B/op
+                 gc.count:           ≈ 0 counts
+
+
+Result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage":
+  97,835 ±(99.9%) 10,445 us/op [Average]
+  (min, avg, max) = (95,110, 97,835, 101,126), stdev = 2,712
+  CI (99.9%): [87,391, 108,280] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage:gc.alloc.rate":
+  0,271 ±(99.9%) 0,027 MB/sec [Average]
+  (min, avg, max) = (0,263, 0,271, 0,278), stdev = 0,007
+  CI (99.9%): [0,243, 0,298] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage:gc.alloc.rate.norm":
+  27,752 ±(99.9%) 0,217 B/op [Average]
+  (min, avg, max) = (27,727, 27,752, 27,853), stdev = 0,056
+  CI (99.9%): [27,534, 27,969] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage:gc.count":
+  ≈ 0 counts
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.2, OpenJDK 64-Bit Server VM, 25.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: --enable-native-access=ALL-UNNAMED -Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf -Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec -Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 500 ms each
+# Measurement: 5 iterations, 500 ms each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage
+# Parameters: (radius = 0.1, size = 1000000)
+
+# Run progress: 61,90% complete, ETA 00:01:08
+# Fork: N/A, test runs in the host VM
+# *** WARNING: Non-forked runs may silently omit JVM options, mess up profilers, disable compiler hints, etc. ***
+# *** WARNING: Use non-forked runs only for debugging purposes, not for actual performance runs. ***
+# Warmup Iteration   1: 1031,203 us/op
+# Warmup Iteration   2: 1032,170 us/op
+# Warmup Iteration   3: 998,295 us/op
+Iteration   1: 1021,676 us/op
+                 gc.alloc.rate:      0,056 MB/sec
+                 gc.alloc.rate.norm: 60,512 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   2: 1007,870 us/op
+                 gc.alloc.rate:      0,051 MB/sec
+                 gc.alloc.rate.norm: 53,568 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   3: 1027,585 us/op
+                 gc.alloc.rate:      0,056 MB/sec
+                 gc.alloc.rate.norm: 60,512 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   4: 1010,591 us/op
+                 gc.alloc.rate:      0,057 MB/sec
+                 gc.alloc.rate.norm: 60,512 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   5: 1017,583 us/op
+                 gc.alloc.rate:      0,057 MB/sec
+                 gc.alloc.rate.norm: 60,512 B/op
+                 gc.count:           ≈ 0 counts
+
+
+Result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage":
+  1017,061 ±(99.9%) 30,965 us/op [Average]
+  (min, avg, max) = (1007,870, 1017,061, 1027,585), stdev = 8,041
+  CI (99.9%): [986,096, 1048,026] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage:gc.alloc.rate":
+  0,055 ±(99.9%) 0,010 MB/sec [Average]
+  (min, avg, max) = (0,051, 0,055, 0,057), stdev = 0,003
+  CI (99.9%): [0,045, 0,066] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage:gc.alloc.rate.norm":
+  59,123 ±(99.9%) 11,958 B/op [Average]
+  (min, avg, max) = (53,568, 59,123, 60,512), stdev = 3,105
+  CI (99.9%): [47,165, 71,081] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage:gc.count":
+  ≈ 0 counts
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.2, OpenJDK 64-Bit Server VM, 25.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: --enable-native-access=ALL-UNNAMED -Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf -Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec -Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 500 ms each
+# Measurement: 5 iterations, 500 ms each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage
+# Parameters: (radius = 1.0, size = 10000)
+
+# Run progress: 64,29% complete, ETA 00:01:04
+# Fork: N/A, test runs in the host VM
+# *** WARNING: Non-forked runs may silently omit JVM options, mess up profilers, disable compiler hints, etc. ***
+# *** WARNING: Use non-forked runs only for debugging purposes, not for actual performance runs. ***
+# Warmup Iteration   1: 9,797 us/op
+# Warmup Iteration   2: 9,976 us/op
+# Warmup Iteration   3: 9,997 us/op
+Iteration   1: 9,796 us/op
+                 gc.alloc.rate:      4,486 MB/sec
+                 gc.alloc.rate.norm: 46,086 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   2: 9,930 us/op
+                 gc.alloc.rate:      4,426 MB/sec
+                 gc.alloc.rate.norm: 46,088 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   3: 9,845 us/op
+                 gc.alloc.rate:      4,463 MB/sec
+                 gc.alloc.rate.norm: 46,087 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   4: 9,885 us/op
+                 gc.alloc.rate:      4,446 MB/sec
+                 gc.alloc.rate.norm: 46,088 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   5: 9,902 us/op
+                 gc.alloc.rate:      4,438 MB/sec
+                 gc.alloc.rate.norm: 46,087 B/op
+                 gc.count:           ≈ 0 counts
+
+
+Result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage":
+  9,872 ±(99.9%) 0,202 us/op [Average]
+  (min, avg, max) = (9,796, 9,872, 9,930), stdev = 0,052
+  CI (99.9%): [9,670, 10,073] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage:gc.alloc.rate":
+  4,452 ±(99.9%) 0,091 MB/sec [Average]
+  (min, avg, max) = (4,426, 4,452, 4,486), stdev = 0,024
+  CI (99.9%): [4,361, 4,542] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage:gc.alloc.rate.norm":
+  46,087 ±(99.9%) 0,004 B/op [Average]
+  (min, avg, max) = (46,086, 46,087, 46,088), stdev = 0,001
+  CI (99.9%): [46,083, 46,091] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage:gc.count":
+  ≈ 0 counts
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.2, OpenJDK 64-Bit Server VM, 25.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: --enable-native-access=ALL-UNNAMED -Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf -Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec -Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 500 ms each
+# Measurement: 5 iterations, 500 ms each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage
+# Parameters: (radius = 1.0, size = 100000)
+
+# Run progress: 66,67% complete, ETA 00:01:00
+# Fork: N/A, test runs in the host VM
+# *** WARNING: Non-forked runs may silently omit JVM options, mess up profilers, disable compiler hints, etc. ***
+# *** WARNING: Use non-forked runs only for debugging purposes, not for actual performance runs. ***
+# Warmup Iteration   1: 99,714 us/op
+# Warmup Iteration   2: 99,844 us/op
+# Warmup Iteration   3: 98,495 us/op
+Iteration   1: 100,347 us/op
+                 gc.alloc.rate:      0,773 MB/sec
+                 gc.alloc.rate.norm: 81,343 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   2: 101,327 us/op
+                 gc.alloc.rate:      0,767 MB/sec
+                 gc.alloc.rate.norm: 81,469 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   3: 103,394 us/op
+                 gc.alloc.rate:      0,751 MB/sec
+                 gc.alloc.rate.norm: 81,469 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   4: 99,362 us/op
+                 gc.alloc.rate:      0,781 MB/sec
+                 gc.alloc.rate.norm: 81,343 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   5: 102,794 us/op
+                 gc.alloc.rate:      0,756 MB/sec
+                 gc.alloc.rate.norm: 81,469 B/op
+                 gc.count:           ≈ 0 counts
+
+
+Result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage":
+  101,445 ±(99.9%) 6,437 us/op [Average]
+  (min, avg, max) = (99,362, 101,445, 103,394), stdev = 1,672
+  CI (99.9%): [95,008, 107,882] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage:gc.alloc.rate":
+  0,765 ±(99.9%) 0,046 MB/sec [Average]
+  (min, avg, max) = (0,751, 0,765, 0,781), stdev = 0,012
+  CI (99.9%): [0,719, 0,812] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage:gc.alloc.rate.norm":
+  81,418 ±(99.9%) 0,266 B/op [Average]
+  (min, avg, max) = (81,343, 81,418, 81,469), stdev = 0,069
+  CI (99.9%): [81,152, 81,685] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage:gc.count":
+  ≈ 0 counts
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.2, OpenJDK 64-Bit Server VM, 25.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: --enable-native-access=ALL-UNNAMED -Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf -Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec -Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 500 ms each
+# Measurement: 5 iterations, 500 ms each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage
+# Parameters: (radius = 1.0, size = 1000000)
+
+# Run progress: 69,05% complete, ETA 00:00:56
+# Fork: N/A, test runs in the host VM
+# *** WARNING: Non-forked runs may silently omit JVM options, mess up profilers, disable compiler hints, etc. ***
+# *** WARNING: Use non-forked runs only for debugging purposes, not for actual performance runs. ***
+# Warmup Iteration   1: 999,445 us/op
+# Warmup Iteration   2: 1002,957 us/op
+# Warmup Iteration   3: 1057,940 us/op
+Iteration   1: 1027,238 us/op
+                 gc.alloc.rate:      0,723 MB/sec
+                 gc.alloc.rate.norm: 779,168 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   2: 1011,941 us/op
+                 gc.alloc.rate:      0,734 MB/sec
+                 gc.alloc.rate.norm: 779,168 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   3: 1001,024 us/op
+                 gc.alloc.rate:      0,736 MB/sec
+                 gc.alloc.rate.norm: 772,224 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   4: 1027,118 us/op
+                 gc.alloc.rate:      0,723 MB/sec
+                 gc.alloc.rate.norm: 779,168 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   5: 1043,942 us/op
+                 gc.alloc.rate:      0,712 MB/sec
+                 gc.alloc.rate.norm: 779,168 B/op
+                 gc.count:           ≈ 0 counts
+
+
+Result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage":
+  1022,253 ±(99.9%) 63,152 us/op [Average]
+  (min, avg, max) = (1001,024, 1022,253, 1043,942), stdev = 16,400
+  CI (99.9%): [959,100, 1085,405] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage:gc.alloc.rate":
+  0,726 ±(99.9%) 0,037 MB/sec [Average]
+  (min, avg, max) = (0,712, 0,726, 0,736), stdev = 0,010
+  CI (99.9%): [0,688, 0,763] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage:gc.alloc.rate.norm":
+  777,779 ±(99.9%) 11,958 B/op [Average]
+  (min, avg, max) = (772,224, 777,779, 779,168), stdev = 3,105
+  CI (99.9%): [765,821, 789,737] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage:gc.count":
+  ≈ 0 counts
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.2, OpenJDK 64-Bit Server VM, 25.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: --enable-native-access=ALL-UNNAMED -Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf -Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec -Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 500 ms each
+# Measurement: 5 iterations, 500 ms each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage
+# Parameters: (radius = 10.0, size = 10000)
+
+# Run progress: 71,43% complete, ETA 00:00:52
+# Fork: N/A, test runs in the host VM
+# *** WARNING: Non-forked runs may silently omit JVM options, mess up profilers, disable compiler hints, etc. ***
+# *** WARNING: Use non-forked runs only for debugging purposes, not for actual performance runs. ***
+# Warmup Iteration   1: 10,557 us/op
+# Warmup Iteration   2: 10,637 us/op
+# Warmup Iteration   3: 10,612 us/op
+Iteration   1: 10,875 us/op
+                 gc.alloc.rate:      65,314 MB/sec
+                 gc.alloc.rate.norm: 744,869 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   2: 11,539 us/op
+                 gc.alloc.rate:      61,555 MB/sec
+                 gc.alloc.rate.norm: 744,881 B/op
+                 gc.count:           1,000 counts
+                 gc.time:            14,000 ms
+
+Iteration   3: 11,673 us/op
+                 gc.alloc.rate:      60,848 MB/sec
+                 gc.alloc.rate.norm: 744,880 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   4: 12,152 us/op
+                 gc.alloc.rate:      58,449 MB/sec
+                 gc.alloc.rate.norm: 744,885 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   5: 12,158 us/op
+                 gc.alloc.rate:      58,422 MB/sec
+                 gc.alloc.rate.norm: 744,885 B/op
+                 gc.count:           ≈ 0 counts
+
+
+Result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage":
+  11,679 ±(99.9%) 2,038 us/op [Average]
+  (min, avg, max) = (10,875, 11,679, 12,158), stdev = 0,529
+  CI (99.9%): [9,642, 13,717] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage:gc.alloc.rate":
+  60,918 ±(99.9%) 10,901 MB/sec [Average]
+  (min, avg, max) = (58,422, 60,918, 65,314), stdev = 2,831
+  CI (99.9%): [50,016, 71,819] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage:gc.alloc.rate.norm":
+  744,880 ±(99.9%) 0,025 B/op [Average]
+  (min, avg, max) = (744,869, 744,880, 744,885), stdev = 0,007
+  CI (99.9%): [744,855, 744,905] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage:gc.count":
+  1,000 ±(99.9%) 0,001 counts [Sum]
+  (min, avg, max) = (≈ 0, 0,200, 1,000), stdev = 0,447
+  CI (99.9%): [1,000, 1,000] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage:gc.time":
+  14,000 ±(99.9%) 0,001 ms [Sum]
+  (min, avg, max) = (≈ 0, 2,800, 14,000), stdev = 6,261
+  CI (99.9%): [14,000, 14,000] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.2, OpenJDK 64-Bit Server VM, 25.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: --enable-native-access=ALL-UNNAMED -Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf -Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec -Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 500 ms each
+# Measurement: 5 iterations, 500 ms each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage
+# Parameters: (radius = 10.0, size = 100000)
+
+# Run progress: 73,81% complete, ETA 00:00:47
+# Fork: N/A, test runs in the host VM
+# *** WARNING: Non-forked runs may silently omit JVM options, mess up profilers, disable compiler hints, etc. ***
+# *** WARNING: Use non-forked runs only for debugging purposes, not for actual performance runs. ***
+# Warmup Iteration   1: 107,376 us/op
+# Warmup Iteration   2: 106,835 us/op
+# Warmup Iteration   3: 106,535 us/op
+Iteration   1: 105,067 us/op
+                 gc.alloc.rate:      59,899 MB/sec
+                 gc.alloc.rate.norm: 6600,301 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   2: 104,811 us/op
+                 gc.alloc.rate:      60,047 MB/sec
+                 gc.alloc.rate.norm: 6600,301 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   3: 105,278 us/op
+                 gc.alloc.rate:      59,781 MB/sec
+                 gc.alloc.rate.norm: 6600,301 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   4: 109,993 us/op
+                 gc.alloc.rate:      57,218 MB/sec
+                 gc.alloc.rate.norm: 6600,301 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   5: 103,704 us/op
+                 gc.alloc.rate:      60,688 MB/sec
+                 gc.alloc.rate.norm: 6600,398 B/op
+                 gc.count:           ≈ 0 counts
+
+
+Result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage":
+  105,771 ±(99.9%) 9,385 us/op [Average]
+  (min, avg, max) = (103,704, 105,771, 109,993), stdev = 2,437
+  CI (99.9%): [96,385, 115,156] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage:gc.alloc.rate":
+  59,526 ±(99.9%) 5,149 MB/sec [Average]
+  (min, avg, max) = (57,218, 59,526, 60,688), stdev = 1,337
+  CI (99.9%): [54,377, 64,676] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage:gc.alloc.rate.norm":
+  6600,320 ±(99.9%) 0,168 B/op [Average]
+  (min, avg, max) = (6600,301, 6600,320, 6600,398), stdev = 0,044
+  CI (99.9%): [6600,152, 6600,488] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage:gc.count":
+  ≈ 0 counts
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.2, OpenJDK 64-Bit Server VM, 25.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: --enable-native-access=ALL-UNNAMED -Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf -Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec -Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 500 ms each
+# Measurement: 5 iterations, 500 ms each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage
+# Parameters: (radius = 10.0, size = 1000000)
+
+# Run progress: 76,19% complete, ETA 00:00:43
+# Fork: N/A, test runs in the host VM
+# *** WARNING: Non-forked runs may silently omit JVM options, mess up profilers, disable compiler hints, etc. ***
+# *** WARNING: Use non-forked runs only for debugging purposes, not for actual performance runs. ***
+# Warmup Iteration   1: 1121,551 us/op
+# Warmup Iteration   2: 1061,674 us/op
+# Warmup Iteration   3: 1080,349 us/op
+Iteration   1: 1079,457 us/op
+                 gc.alloc.rate:      64,679 MB/sec
+                 gc.alloc.rate.norm: 73220,512 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   2: 1076,235 us/op
+                 gc.alloc.rate:      64,870 MB/sec
+                 gc.alloc.rate.norm: 73220,512 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   3: 1087,784 us/op
+                 gc.alloc.rate:      64,183 MB/sec
+                 gc.alloc.rate.norm: 73220,512 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   4: 1073,167 us/op
+                 gc.alloc.rate:      65,059 MB/sec
+                 gc.alloc.rate.norm: 73220,512 B/op
+                 gc.count:           ≈ 0 counts
+
+Iteration   5: 1079,165 us/op
+                 gc.alloc.rate:      64,697 MB/sec
+                 gc.alloc.rate.norm: 73220,512 B/op
+                 gc.count:           ≈ 0 counts
+
+
+Result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage":
+  1079,162 ±(99.9%) 20,996 us/op [Average]
+  (min, avg, max) = (1073,167, 1079,162, 1087,784), stdev = 5,453
+  CI (99.9%): [1058,165, 1100,158] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage:gc.alloc.rate":
+  64,697 ±(99.9%) 1,257 MB/sec [Average]
+  (min, avg, max) = (64,183, 64,697, 65,059), stdev = 0,326
+  CI (99.9%): [63,441, 65,954] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage:gc.alloc.rate.norm":
+  73220,512 ±(99.9%) 0,001 B/op [Average]
+  (min, avg, max) = (73220,512, 73220,512, 73220,512), stdev = 0,001
+  CI (99.9%): [73220,512, 73220,512] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage:gc.count":
+  ≈ 0 counts
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.2, OpenJDK 64-Bit Server VM, 25.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: --enable-native-access=ALL-UNNAMED -Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf -Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec -Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 500 ms each
+# Measurement: 5 iterations, 500 ms each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage
+# Parameters: (radius = 0.1, size = 10000)
+
+# Run progress: 78,57% complete, ETA 00:00:39
+# Fork: N/A, test runs in the host VM
+# *** WARNING: Non-forked runs may silently omit JVM options, mess up profilers, disable compiler hints, etc. ***
+# *** WARNING: Use non-forked runs only for debugging purposes, not for actual performance runs. ***
+# Warmup Iteration   1: 0,065 us/op
+# Warmup Iteration   2: 0,069 us/op
+# Warmup Iteration   3: 0,065 us/op
+Iteration   1: 0,063 us/op
+                 gc.alloc.rate:      4543,171 MB/sec
+                 gc.alloc.rate.norm: 299,585 B/op
+                 gc.count:           3,000 counts
+                 gc.time:            12,000 ms
+
+Iteration   2: 0,060 us/op
+                 gc.alloc.rate:      4730,123 MB/sec
+                 gc.alloc.rate.norm: 299,585 B/op
+                 gc.count:           3,000 counts
+                 gc.time:            2,000 ms
+
+Iteration   3: 0,059 us/op
+                 gc.alloc.rate:      4854,992 MB/sec
+                 gc.alloc.rate.norm: 299,585 B/op
+                 gc.count:           3,000 counts
+                 gc.time:            1,000 ms
+
+Iteration   4: 0,060 us/op
+                 gc.alloc.rate:      4775,497 MB/sec
+                 gc.alloc.rate.norm: 299,585 B/op
+                 gc.count:           3,000 counts
+                 gc.time:            1,000 ms
+
+Iteration   5: 0,063 us/op
+                 gc.alloc.rate:      4522,460 MB/sec
+                 gc.alloc.rate.norm: 299,585 B/op
+                 gc.count:           3,000 counts
+                 gc.time:            1,000 ms
+
+
+Result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage":
+  0,061 ±(99.9%) 0,007 us/op [Average]
+  (min, avg, max) = (0,059, 0,061, 0,063), stdev = 0,002
+  CI (99.9%): [0,054, 0,068] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage:gc.alloc.rate":
+  4685,249 ±(99.9%) 563,490 MB/sec [Average]
+  (min, avg, max) = (4522,460, 4685,249, 4854,992), stdev = 146,337
+  CI (99.9%): [4121,759, 5248,739] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage:gc.alloc.rate.norm":
+  299,585 ±(99.9%) 0,001 B/op [Average]
+  (min, avg, max) = (299,585, 299,585, 299,585), stdev = 0,001
+  CI (99.9%): [299,585, 299,585] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage:gc.count":
+  15,000 ±(99.9%) 0,001 counts [Sum]
+  (min, avg, max) = (3,000, 3,000, 3,000), stdev = 0,001
+  CI (99.9%): [15,000, 15,000] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage:gc.time":
+  17,000 ±(99.9%) 0,001 ms [Sum]
+  (min, avg, max) = (1,000, 3,400, 12,000), stdev = 4,827
+  CI (99.9%): [17,000, 17,000] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.2, OpenJDK 64-Bit Server VM, 25.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: --enable-native-access=ALL-UNNAMED -Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf -Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec -Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 500 ms each
+# Measurement: 5 iterations, 500 ms each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage
+# Parameters: (radius = 0.1, size = 100000)
+
+# Run progress: 80,95% complete, ETA 00:00:34
+# Fork: N/A, test runs in the host VM
+# *** WARNING: Non-forked runs may silently omit JVM options, mess up profilers, disable compiler hints, etc. ***
+# *** WARNING: Use non-forked runs only for debugging purposes, not for actual performance runs. ***
+# Warmup Iteration   1: 0,088 us/op
+# Warmup Iteration   2: 0,085 us/op
+# Warmup Iteration   3: 0,086 us/op
+Iteration   1: 0,083 us/op
+                 gc.alloc.rate:      4139,047 MB/sec
+                 gc.alloc.rate.norm: 360,993 B/op
+                 gc.count:           3,000 counts
+                 gc.time:            4,000 ms
+
+Iteration   2: 0,086 us/op
+                 gc.alloc.rate:      3996,134 MB/sec
+                 gc.alloc.rate.norm: 360,993 B/op
+                 gc.count:           3,000 counts
+                 gc.time:            4,000 ms
+
+Iteration   3: 0,086 us/op
+                 gc.alloc.rate:      3993,356 MB/sec
+                 gc.alloc.rate.norm: 360,993 B/op
+                 gc.count:           3,000 counts
+                 gc.time:            3,000 ms
+
+Iteration   4: 0,085 us/op
+                 gc.alloc.rate:      4064,309 MB/sec
+                 gc.alloc.rate.norm: 360,993 B/op
+                 gc.count:           2,000 counts
+                 gc.time:            ≈ 0 ms
+
+Iteration   5: 0,086 us/op
+                 gc.alloc.rate:      3988,698 MB/sec
+                 gc.alloc.rate.norm: 360,993 B/op
+                 gc.count:           3,000 counts
+                 gc.time:            1,000 ms
+
+
+Result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage":
+  0,085 ±(99.9%) 0,005 us/op [Average]
+  (min, avg, max) = (0,083, 0,085, 0,086), stdev = 0,001
+  CI (99.9%): [0,080, 0,091] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage:gc.alloc.rate":
+  4036,308 ±(99.9%) 251,510 MB/sec [Average]
+  (min, avg, max) = (3988,698, 4036,308, 4139,047), stdev = 65,316
+  CI (99.9%): [3784,799, 4287,818] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage:gc.alloc.rate.norm":
+  360,993 ±(99.9%) 0,001 B/op [Average]
+  (min, avg, max) = (360,993, 360,993, 360,993), stdev = 0,001
+  CI (99.9%): [360,993, 360,993] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage:gc.count":
+  14,000 ±(99.9%) 0,001 counts [Sum]
+  (min, avg, max) = (2,000, 2,800, 3,000), stdev = 0,447
+  CI (99.9%): [14,000, 14,000] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage:gc.time":
+  12,000 ±(99.9%) 0,001 ms [Sum]
+  (min, avg, max) = (≈ 0, 2,400, 4,000), stdev = 1,817
+  CI (99.9%): [12,000, 12,000] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.2, OpenJDK 64-Bit Server VM, 25.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: --enable-native-access=ALL-UNNAMED -Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf -Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec -Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 500 ms each
+# Measurement: 5 iterations, 500 ms each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage
+# Parameters: (radius = 0.1, size = 1000000)
+
+# Run progress: 83,33% complete, ETA 00:00:30
+# Fork: N/A, test runs in the host VM
+# *** WARNING: Non-forked runs may silently omit JVM options, mess up profilers, disable compiler hints, etc. ***
+# *** WARNING: Use non-forked runs only for debugging purposes, not for actual performance runs. ***
+# Warmup Iteration   1: 0,155 us/op
+# Warmup Iteration   2: 0,142 us/op
+# Warmup Iteration   3: 0,145 us/op
+Iteration   1: 0,147 us/op
+                 gc.alloc.rate:      3289,748 MB/sec
+                 gc.alloc.rate.norm: 508,370 B/op
+                 gc.count:           2,000 counts
+                 gc.time:            ≈ 0 ms
+
+Iteration   2: 0,140 us/op
+                 gc.alloc.rate:      3450,740 MB/sec
+                 gc.alloc.rate.norm: 508,370 B/op
+                 gc.count:           3,000 counts
+                 gc.time:            1,000 ms
+
+Iteration   3: 0,148 us/op
+                 gc.alloc.rate:      3281,377 MB/sec
+                 gc.alloc.rate.norm: 508,370 B/op
+                 gc.count:           2,000 counts
+                 gc.time:            1,000 ms
+
+Iteration   4: 0,146 us/op
+                 gc.alloc.rate:      3325,223 MB/sec
+                 gc.alloc.rate.norm: 508,370 B/op
+                 gc.count:           2,000 counts
+                 gc.time:            1,000 ms
+
+Iteration   5: 0,150 us/op
+                 gc.alloc.rate:      3231,430 MB/sec
+                 gc.alloc.rate.norm: 508,370 B/op
+                 gc.count:           2,000 counts
+                 gc.time:            1,000 ms
+
+
+Result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage":
+  0,146 ±(99.9%) 0,014 us/op [Average]
+  (min, avg, max) = (0,140, 0,146, 0,150), stdev = 0,004
+  CI (99.9%): [0,133, 0,160] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage:gc.alloc.rate":
+  3315,704 ±(99.9%) 317,997 MB/sec [Average]
+  (min, avg, max) = (3231,430, 3315,704, 3450,740), stdev = 82,583
+  CI (99.9%): [2997,707, 3633,700] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage:gc.alloc.rate.norm":
+  508,370 ±(99.9%) 0,001 B/op [Average]
+  (min, avg, max) = (508,370, 508,370, 508,370), stdev = 0,001
+  CI (99.9%): [508,370, 508,370] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage:gc.count":
+  11,000 ±(99.9%) 0,001 counts [Sum]
+  (min, avg, max) = (2,000, 2,200, 3,000), stdev = 0,447
+  CI (99.9%): [11,000, 11,000] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage:gc.time":
+  4,000 ±(99.9%) 0,001 ms [Sum]
+  (min, avg, max) = (≈ 0, 0,800, 1,000), stdev = 0,447
+  CI (99.9%): [4,000, 4,000] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.2, OpenJDK 64-Bit Server VM, 25.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: --enable-native-access=ALL-UNNAMED -Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf -Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec -Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 500 ms each
+# Measurement: 5 iterations, 500 ms each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage
+# Parameters: (radius = 1.0, size = 10000)
+
+# Run progress: 85,71% complete, ETA 00:00:26
+# Fork: N/A, test runs in the host VM
+# *** WARNING: Non-forked runs may silently omit JVM options, mess up profilers, disable compiler hints, etc. ***
+# *** WARNING: Use non-forked runs only for debugging purposes, not for actual performance runs. ***
+# Warmup Iteration   1: 0,089 us/op
+# Warmup Iteration   2: 0,089 us/op
+# Warmup Iteration   3: 0,090 us/op
+Iteration   1: 0,087 us/op
+                 gc.alloc.rate:      4388,323 MB/sec
+                 gc.alloc.rate.norm: 400,433 B/op
+                 gc.count:           3,000 counts
+                 gc.time:            2,000 ms
+
+Iteration   2: 0,086 us/op
+                 gc.alloc.rate:      4433,391 MB/sec
+                 gc.alloc.rate.norm: 400,433 B/op
+                 gc.count:           3,000 counts
+                 gc.time:            1,000 ms
+
+Iteration   3: 0,087 us/op
+                 gc.alloc.rate:      4395,532 MB/sec
+                 gc.alloc.rate.norm: 400,433 B/op
+                 gc.count:           3,000 counts
+                 gc.time:            2,000 ms
+
+Iteration   4: 0,087 us/op
+                 gc.alloc.rate:      4389,108 MB/sec
+                 gc.alloc.rate.norm: 400,433 B/op
+                 gc.count:           3,000 counts
+                 gc.time:            1,000 ms
+
+Iteration   5: 0,087 us/op
+                 gc.alloc.rate:      4380,538 MB/sec
+                 gc.alloc.rate.norm: 400,433 B/op
+                 gc.count:           3,000 counts
+                 gc.time:            1,000 ms
+
+
+Result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage":
+  0,087 ±(99.9%) 0,002 us/op [Average]
+  (min, avg, max) = (0,086, 0,087, 0,087), stdev = 0,001
+  CI (99.9%): [0,085, 0,088] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage:gc.alloc.rate":
+  4397,379 ±(99.9%) 80,180 MB/sec [Average]
+  (min, avg, max) = (4380,538, 4397,379, 4433,391), stdev = 20,822
+  CI (99.9%): [4317,199, 4477,558] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage:gc.alloc.rate.norm":
+  400,433 ±(99.9%) 0,001 B/op [Average]
+  (min, avg, max) = (400,433, 400,433, 400,433), stdev = 0,001
+  CI (99.9%): [400,433, 400,433] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage:gc.count":
+  15,000 ±(99.9%) 0,001 counts [Sum]
+  (min, avg, max) = (3,000, 3,000, 3,000), stdev = 0,001
+  CI (99.9%): [15,000, 15,000] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage:gc.time":
+  7,000 ±(99.9%) 0,001 ms [Sum]
+  (min, avg, max) = (1,000, 1,400, 2,000), stdev = 0,548
+  CI (99.9%): [7,000, 7,000] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.2, OpenJDK 64-Bit Server VM, 25.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: --enable-native-access=ALL-UNNAMED -Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf -Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec -Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 500 ms each
+# Measurement: 5 iterations, 500 ms each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage
+# Parameters: (radius = 1.0, size = 100000)
+
+# Run progress: 88,10% complete, ETA 00:00:21
+# Fork: N/A, test runs in the host VM
+# *** WARNING: Non-forked runs may silently omit JVM options, mess up profilers, disable compiler hints, etc. ***
+# *** WARNING: Use non-forked runs only for debugging purposes, not for actual performance runs. ***
+# Warmup Iteration   1: 0,253 us/op
+# Warmup Iteration   2: 0,242 us/op
+# Warmup Iteration   3: 0,249 us/op
+Iteration   1: 0,243 us/op
+                 gc.alloc.rate:      2635,205 MB/sec
+                 gc.alloc.rate.norm: 671,555 B/op
+                 gc.count:           2,000 counts
+                 gc.time:            3,000 ms
+
+Iteration   2: 0,246 us/op
+                 gc.alloc.rate:      2604,648 MB/sec
+                 gc.alloc.rate.norm: 671,555 B/op
+                 gc.count:           1,000 counts
+                 gc.time:            1,000 ms
+
+Iteration   3: 0,259 us/op
+                 gc.alloc.rate:      2473,509 MB/sec
+                 gc.alloc.rate.norm: 671,556 B/op
+                 gc.count:           2,000 counts
+                 gc.time:            3,000 ms
+
+Iteration   4: 0,243 us/op
+                 gc.alloc.rate:      2636,858 MB/sec
+                 gc.alloc.rate.norm: 671,555 B/op
+                 gc.count:           2,000 counts
+                 gc.time:            2,000 ms
+
+Iteration   5: 0,248 us/op
+                 gc.alloc.rate:      2583,419 MB/sec
+                 gc.alloc.rate.norm: 671,555 B/op
+                 gc.count:           2,000 counts
+                 gc.time:            3,000 ms
+
+
+Result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage":
+  0,248 ±(99.9%) 0,025 us/op [Average]
+  (min, avg, max) = (0,243, 0,248, 0,259), stdev = 0,007
+  CI (99.9%): [0,222, 0,273] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage:gc.alloc.rate":
+  2586,728 ±(99.9%) 258,406 MB/sec [Average]
+  (min, avg, max) = (2473,509, 2586,728, 2636,858), stdev = 67,107
+  CI (99.9%): [2328,322, 2845,134] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage:gc.alloc.rate.norm":
+  671,555 ±(99.9%) 0,001 B/op [Average]
+  (min, avg, max) = (671,555, 671,555, 671,556), stdev = 0,001
+  CI (99.9%): [671,555, 671,556] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage:gc.count":
+  9,000 ±(99.9%) 0,001 counts [Sum]
+  (min, avg, max) = (1,000, 1,800, 2,000), stdev = 0,447
+  CI (99.9%): [9,000, 9,000] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage:gc.time":
+  12,000 ±(99.9%) 0,001 ms [Sum]
+  (min, avg, max) = (1,000, 2,400, 3,000), stdev = 0,894
+  CI (99.9%): [12,000, 12,000] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.2, OpenJDK 64-Bit Server VM, 25.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: --enable-native-access=ALL-UNNAMED -Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf -Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec -Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 500 ms each
+# Measurement: 5 iterations, 500 ms each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage
+# Parameters: (radius = 1.0, size = 1000000)
+
+# Run progress: 90,48% complete, ETA 00:00:17
+# Fork: N/A, test runs in the host VM
+# *** WARNING: Non-forked runs may silently omit JVM options, mess up profilers, disable compiler hints, etc. ***
+# *** WARNING: Use non-forked runs only for debugging purposes, not for actual performance runs. ***
+# Warmup Iteration   1: 1,707 us/op
+# Warmup Iteration   2: 1,550 us/op
+# Warmup Iteration   3: 1,599 us/op
+Iteration   1: 1,512 us/op
+                 gc.alloc.rate:      2100,371 MB/sec
+                 gc.alloc.rate.norm: 3331,733 B/op
+                 gc.count:           3,000 counts
+                 gc.time:            1,000 ms
+
+Iteration   2: 1,460 us/op
+                 gc.alloc.rate:      2175,669 MB/sec
+                 gc.alloc.rate.norm: 3331,732 B/op
+                 gc.count:           3,000 counts
+                 gc.time:            1,000 ms
+
+Iteration   3: 1,438 us/op
+                 gc.alloc.rate:      2208,874 MB/sec
+                 gc.alloc.rate.norm: 3331,732 B/op
+                 gc.count:           3,000 counts
+                 gc.time:            1,000 ms
+
+Iteration   4: 1,456 us/op
+                 gc.alloc.rate:      2182,297 MB/sec
+                 gc.alloc.rate.norm: 3331,732 B/op
+                 gc.count:           3,000 counts
+                 gc.time:            1,000 ms
+
+Iteration   5: 1,449 us/op
+                 gc.alloc.rate:      2192,102 MB/sec
+                 gc.alloc.rate.norm: 3331,732 B/op
+                 gc.count:           3,000 counts
+                 gc.time:            2,000 ms
+
+
+Result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage":
+  1,463 ±(99.9%) 0,111 us/op [Average]
+  (min, avg, max) = (1,438, 1,463, 1,512), stdev = 0,029
+  CI (99.9%): [1,353, 1,574] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage:gc.alloc.rate":
+  2171,863 ±(99.9%) 161,243 MB/sec [Average]
+  (min, avg, max) = (2100,371, 2171,863, 2208,874), stdev = 41,874
+  CI (99.9%): [2010,620, 2333,105] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage:gc.alloc.rate.norm":
+  3331,732 ±(99.9%) 0,002 B/op [Average]
+  (min, avg, max) = (3331,732, 3331,732, 3331,733), stdev = 0,001
+  CI (99.9%): [3331,731, 3331,734] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage:gc.count":
+  15,000 ±(99.9%) 0,001 counts [Sum]
+  (min, avg, max) = (3,000, 3,000, 3,000), stdev = 0,001
+  CI (99.9%): [15,000, 15,000] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage:gc.time":
+  6,000 ±(99.9%) 0,001 ms [Sum]
+  (min, avg, max) = (1,000, 1,200, 2,000), stdev = 0,447
+  CI (99.9%): [6,000, 6,000] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.2, OpenJDK 64-Bit Server VM, 25.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: --enable-native-access=ALL-UNNAMED -Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf -Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec -Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 500 ms each
+# Measurement: 5 iterations, 500 ms each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage
+# Parameters: (radius = 10.0, size = 10000)
+
+# Run progress: 92,86% complete, ETA 00:00:12
+# Fork: N/A, test runs in the host VM
+# *** WARNING: Non-forked runs may silently omit JVM options, mess up profilers, disable compiler hints, etc. ***
+# *** WARNING: Use non-forked runs only for debugging purposes, not for actual performance runs. ***
+# Warmup Iteration   1: 1,280 us/op
+# Warmup Iteration   2: 1,257 us/op
+# Warmup Iteration   3: 1,189 us/op
+Iteration   1: 1,163 us/op
+                 gc.alloc.rate:      2615,043 MB/sec
+                 gc.alloc.rate.norm: 3189,504 B/op
+                 gc.count:           4,000 counts
+                 gc.time:            2,000 ms
+
+Iteration   2: 1,164 us/op
+                 gc.alloc.rate:      2613,224 MB/sec
+                 gc.alloc.rate.norm: 3189,504 B/op
+                 gc.count:           3,000 counts
+                 gc.time:            1,000 ms
+
+Iteration   3: 1,182 us/op
+                 gc.alloc.rate:      2573,393 MB/sec
+                 gc.alloc.rate.norm: 3189,504 B/op
+                 gc.count:           4,000 counts
+                 gc.time:            2,000 ms
+
+Iteration   4: 1,453 us/op
+                 gc.alloc.rate:      2093,487 MB/sec
+                 gc.alloc.rate.norm: 3189,508 B/op
+                 gc.count:           3,000 counts
+                 gc.time:            1,000 ms
+
+Iteration   5: 1,249 us/op
+                 gc.alloc.rate:      2435,268 MB/sec
+                 gc.alloc.rate.norm: 3189,505 B/op
+                 gc.count:           3,000 counts
+                 gc.time:            1,000 ms
+
+
+Result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage":
+  1,242 ±(99.9%) 0,473 us/op [Average]
+  (min, avg, max) = (1,163, 1,242, 1,453), stdev = 0,123
+  CI (99.9%): [0,769, 1,715] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage:gc.alloc.rate":
+  2466,083 ±(99.9%) 850,488 MB/sec [Average]
+  (min, avg, max) = (2093,487, 2466,083, 2615,043), stdev = 220,869
+  CI (99.9%): [1615,595, 3316,570] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage:gc.alloc.rate.norm":
+  3189,505 ±(99.9%) 0,007 B/op [Average]
+  (min, avg, max) = (3189,504, 3189,505, 3189,508), stdev = 0,002
+  CI (99.9%): [3189,499, 3189,512] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage:gc.count":
+  17,000 ±(99.9%) 0,001 counts [Sum]
+  (min, avg, max) = (3,000, 3,400, 4,000), stdev = 0,548
+  CI (99.9%): [17,000, 17,000] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage:gc.time":
+  7,000 ±(99.9%) 0,001 ms [Sum]
+  (min, avg, max) = (1,000, 1,400, 2,000), stdev = 0,548
+  CI (99.9%): [7,000, 7,000] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.2, OpenJDK 64-Bit Server VM, 25.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: --enable-native-access=ALL-UNNAMED -Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf -Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec -Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 500 ms each
+# Measurement: 5 iterations, 500 ms each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage
+# Parameters: (radius = 10.0, size = 100000)
+
+# Run progress: 95,24% complete, ETA 00:00:08
+# Fork: N/A, test runs in the host VM
+# *** WARNING: Non-forked runs may silently omit JVM options, mess up profilers, disable compiler hints, etc. ***
+# *** WARNING: Use non-forked runs only for debugging purposes, not for actual performance runs. ***
+# Warmup Iteration   1: 10,983 us/op
+# Warmup Iteration   2: 10,525 us/op
+# Warmup Iteration   3: 10,519 us/op
+Iteration   1: 10,551 us/op
+                 gc.alloc.rate:      2170,786 MB/sec
+                 gc.alloc.rate.norm: 24019,778 B/op
+                 gc.count:           2,000 counts
+                 gc.time:            2,000 ms
+
+Iteration   2: 10,490 us/op
+                 gc.alloc.rate:      2183,448 MB/sec
+                 gc.alloc.rate.norm: 24019,776 B/op
+                 gc.count:           3,000 counts
+                 gc.time:            4,000 ms
+
+Iteration   3: 10,607 us/op
+                 gc.alloc.rate:      2159,330 MB/sec
+                 gc.alloc.rate.norm: 24019,778 B/op
+                 gc.count:           3,000 counts
+                 gc.time:            3,000 ms
+
+Iteration   4: 10,405 us/op
+                 gc.alloc.rate:      2201,253 MB/sec
+                 gc.alloc.rate.norm: 24019,775 B/op
+                 gc.count:           3,000 counts
+                 gc.time:            1,000 ms
+
+Iteration   5: 10,533 us/op
+                 gc.alloc.rate:      2174,552 MB/sec
+                 gc.alloc.rate.norm: 24019,778 B/op
+                 gc.count:           3,000 counts
+                 gc.time:            1,000 ms
+
+
+Result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage":
+  10,517 ±(99.9%) 0,291 us/op [Average]
+  (min, avg, max) = (10,405, 10,517, 10,607), stdev = 0,075
+  CI (99.9%): [10,226, 10,808] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage:gc.alloc.rate":
+  2177,874 ±(99.9%) 60,359 MB/sec [Average]
+  (min, avg, max) = (2159,330, 2177,874, 2201,253), stdev = 15,675
+  CI (99.9%): [2117,515, 2238,233] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage:gc.alloc.rate.norm":
+  24019,777 ±(99.9%) 0,005 B/op [Average]
+  (min, avg, max) = (24019,775, 24019,777, 24019,778), stdev = 0,001
+  CI (99.9%): [24019,772, 24019,782] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage:gc.count":
+  14,000 ±(99.9%) 0,001 counts [Sum]
+  (min, avg, max) = (2,000, 2,800, 3,000), stdev = 0,447
+  CI (99.9%): [14,000, 14,000] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage:gc.time":
+  11,000 ±(99.9%) 0,001 ms [Sum]
+  (min, avg, max) = (1,000, 2,200, 4,000), stdev = 1,304
+  CI (99.9%): [11,000, 11,000] (assumes normal distribution)
+
+
+# JMH version: 1.37
+# VM version: JDK 25.0.2, OpenJDK 64-Bit Server VM, 25.0.2
+# VM invoker: /opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java
+# VM options: --enable-native-access=ALL-UNNAMED -Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf -Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec -Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 3 iterations, 500 ms each
+# Measurement: 5 iterations, 500 ms each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage
+# Parameters: (radius = 10.0, size = 1000000)
+
+# Run progress: 97,62% complete, ETA 00:00:04
+# Fork: N/A, test runs in the host VM
+# *** WARNING: Non-forked runs may silently omit JVM options, mess up profilers, disable compiler hints, etc. ***
+# *** WARNING: Use non-forked runs only for debugging purposes, not for actual performance runs. ***
+# Warmup Iteration   1: 150,001 us/op
+# Warmup Iteration   2: 113,670 us/op
+# Warmup Iteration   3: 110,645 us/op
+Iteration   1: 110,800 us/op
+                 gc.alloc.rate:      1954,046 MB/sec
+                 gc.alloc.rate.norm: 227059,608 B/op
+                 gc.count:           3,000 counts
+                 gc.time:            1,000 ms
+
+Iteration   2: 111,061 us/op
+                 gc.alloc.rate:      1949,398 MB/sec
+                 gc.alloc.rate.norm: 227059,608 B/op
+                 gc.count:           3,000 counts
+                 gc.time:            1,000 ms
+
+Iteration   3: 111,192 us/op
+                 gc.alloc.rate:      1947,158 MB/sec
+                 gc.alloc.rate.norm: 227059,608 B/op
+                 gc.count:           2,000 counts
+                 gc.time:            1,000 ms
+
+Iteration   4: 111,272 us/op
+                 gc.alloc.rate:      1945,803 MB/sec
+                 gc.alloc.rate.norm: 227059,608 B/op
+                 gc.count:           3,000 counts
+                 gc.time:            1,000 ms
+
+Iteration   5: 112,156 us/op
+                 gc.alloc.rate:      1930,414 MB/sec
+                 gc.alloc.rate.norm: 227059,764 B/op
+                 gc.count:           3,000 counts
+                 gc.time:            1,000 ms
+
+
+Result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage":
+  111,296 ±(99.9%) 1,974 us/op [Average]
+  (min, avg, max) = (110,800, 111,296, 112,156), stdev = 0,513
+  CI (99.9%): [109,322, 113,270] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage:gc.alloc.rate":
+  1945,364 ±(99.9%) 34,364 MB/sec [Average]
+  (min, avg, max) = (1930,414, 1945,364, 1954,046), stdev = 8,924
+  CI (99.9%): [1911,000, 1979,728] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage:gc.alloc.rate.norm":
+  227059,639 ±(99.9%) 0,268 B/op [Average]
+  (min, avg, max) = (227059,608, 227059,639, 227059,764), stdev = 0,070
+  CI (99.9%): [227059,371, 227059,907] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage:gc.count":
+  14,000 ±(99.9%) 0,001 counts [Sum]
+  (min, avg, max) = (2,000, 2,800, 3,000), stdev = 0,447
+  CI (99.9%): [14,000, 14,000] (assumes normal distribution)
+
+Secondary result "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage:gc.time":
+  5,000 ±(99.9%) 0,001 ms [Sum]
+  (min, avg, max) = (1,000, 1,000, 1,000), stdev = 0,001
+  CI (99.9%): [5,000, 5,000] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:03:01
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                                                      (radius)   (size)   Mode  Cnt         Score         Error   Units
+GeoIndexBenchmark.searchNaiveThroughput                             0.1    10000  thrpt    5     98819,860 ±    8117,624   ops/s
+GeoIndexBenchmark.searchNaiveThroughput:gc.alloc.rate               0.1    10000  thrpt    5         2,285 ±       0,186  MB/sec
+GeoIndexBenchmark.searchNaiveThroughput:gc.alloc.rate.norm          0.1    10000  thrpt    5        24,250 ±       0,011    B/op
+GeoIndexBenchmark.searchNaiveThroughput:gc.count                    0.1    10000  thrpt    5           ≈ 0                counts
+GeoIndexBenchmark.searchNaiveThroughput                             0.1   100000  thrpt    5     10049,180 ±     675,921   ops/s
+GeoIndexBenchmark.searchNaiveThroughput:gc.alloc.rate               0.1   100000  thrpt    5         0,266 ±       0,016  MB/sec
+GeoIndexBenchmark.searchNaiveThroughput:gc.alloc.rate.norm          0.1   100000  thrpt    5        27,752 ±       0,217    B/op
+GeoIndexBenchmark.searchNaiveThroughput:gc.count                    0.1   100000  thrpt    5           ≈ 0                counts
+GeoIndexBenchmark.searchNaiveThroughput                             0.1  1000000  thrpt    5       941,267 ±     116,512   ops/s
+GeoIndexBenchmark.searchNaiveThroughput:gc.alloc.rate               0.1  1000000  thrpt    5         0,054 ±       0,007  MB/sec
+GeoIndexBenchmark.searchNaiveThroughput:gc.alloc.rate.norm          0.1  1000000  thrpt    5        60,525 ±       0,270    B/op
+GeoIndexBenchmark.searchNaiveThroughput:gc.count                    0.1  1000000  thrpt    5           ≈ 0                counts
+GeoIndexBenchmark.searchNaiveThroughput                             1.0    10000  thrpt    5    100470,646 ±    5485,816   ops/s
+GeoIndexBenchmark.searchNaiveThroughput:gc.alloc.rate               1.0    10000  thrpt    5         4,415 ±       0,241  MB/sec
+GeoIndexBenchmark.searchNaiveThroughput:gc.alloc.rate.norm          1.0    10000  thrpt    5        46,088 ±       0,006    B/op
+GeoIndexBenchmark.searchNaiveThroughput:gc.count                    1.0    10000  thrpt    5           ≈ 0                counts
+GeoIndexBenchmark.searchNaiveThroughput                             1.0   100000  thrpt    5     10047,872 ±     583,799   ops/s
+GeoIndexBenchmark.searchNaiveThroughput:gc.alloc.rate               1.0   100000  thrpt    5         0,780 ±       0,044  MB/sec
+GeoIndexBenchmark.searchNaiveThroughput:gc.alloc.rate.norm          1.0   100000  thrpt    5        81,368 ±       0,217    B/op
+GeoIndexBenchmark.searchNaiveThroughput:gc.count                    1.0   100000  thrpt    5           ≈ 0                counts
+GeoIndexBenchmark.searchNaiveThroughput                             1.0  1000000  thrpt    5       863,095 ±      90,415   ops/s
+GeoIndexBenchmark.searchNaiveThroughput:gc.alloc.rate               1.0  1000000  thrpt    5         0,641 ±       0,067  MB/sec
+GeoIndexBenchmark.searchNaiveThroughput:gc.alloc.rate.norm          1.0  1000000  thrpt    5       779,168 ±       0,001    B/op
+GeoIndexBenchmark.searchNaiveThroughput:gc.count                    1.0  1000000  thrpt    5           ≈ 0                counts
+GeoIndexBenchmark.searchNaiveThroughput                            10.0    10000  thrpt    5     84173,079 ±    7159,677   ops/s
+GeoIndexBenchmark.searchNaiveThroughput:gc.alloc.rate              10.0    10000  thrpt    5        59,785 ±       5,083  MB/sec
+GeoIndexBenchmark.searchNaiveThroughput:gc.alloc.rate.norm         10.0    10000  thrpt    5       744,884 ±       0,017    B/op
+GeoIndexBenchmark.searchNaiveThroughput:gc.count                   10.0    10000  thrpt    5         4,000                counts
+GeoIndexBenchmark.searchNaiveThroughput:gc.time                    10.0    10000  thrpt    5         3,000                    ms
+GeoIndexBenchmark.searchNaiveThroughput                            10.0   100000  thrpt    5      6658,850 ±    2114,977   ops/s
+GeoIndexBenchmark.searchNaiveThroughput:gc.alloc.rate              10.0   100000  thrpt    5        41,910 ±      13,307  MB/sec
+GeoIndexBenchmark.searchNaiveThroughput:gc.alloc.rate.norm         10.0   100000  thrpt    5      6600,866 ±       0,920    B/op
+GeoIndexBenchmark.searchNaiveThroughput:gc.count                   10.0   100000  thrpt    5         1,000                counts
+GeoIndexBenchmark.searchNaiveThroughput:gc.time                    10.0   100000  thrpt    5         2,000                    ms
+GeoIndexBenchmark.searchNaiveThroughput                            10.0  1000000  thrpt    5       756,972 ±     105,076   ops/s
+GeoIndexBenchmark.searchNaiveThroughput:gc.alloc.rate              10.0  1000000  thrpt    5        52,849 ±       7,336  MB/sec
+GeoIndexBenchmark.searchNaiveThroughput:gc.alloc.rate.norm         10.0  1000000  thrpt    5     73220,570 ±       0,216    B/op
+GeoIndexBenchmark.searchNaiveThroughput:gc.count                   10.0  1000000  thrpt    5         4,000                counts
+GeoIndexBenchmark.searchNaiveThroughput:gc.time                    10.0  1000000  thrpt    5         9,000                    ms
+GeoIndexBenchmark.searchQuadtreeThroughput                          0.1    10000  thrpt    5  16842846,575 ± 1444460,823   ops/s
+GeoIndexBenchmark.searchQuadtreeThroughput:gc.alloc.rate            0.1    10000  thrpt    5      4811,291 ±     412,908  MB/sec
+GeoIndexBenchmark.searchQuadtreeThroughput:gc.alloc.rate.norm       0.1    10000  thrpt    5       299,585 ±       0,001    B/op
+GeoIndexBenchmark.searchQuadtreeThroughput:gc.count                 0.1    10000  thrpt    5       114,000                counts
+GeoIndexBenchmark.searchQuadtreeThroughput:gc.time                  0.1    10000  thrpt    5        27,000                    ms
+GeoIndexBenchmark.searchQuadtreeThroughput                          0.1   100000  thrpt    5  11657959,368 ±  683727,843   ops/s
+GeoIndexBenchmark.searchQuadtreeThroughput:gc.alloc.rate            0.1   100000  thrpt    5      4012,839 ±     235,521  MB/sec
+GeoIndexBenchmark.searchQuadtreeThroughput:gc.alloc.rate.norm       0.1   100000  thrpt    5       360,993 ±       0,001    B/op
+GeoIndexBenchmark.searchQuadtreeThroughput:gc.count                 0.1   100000  thrpt    5        30,000                counts
+GeoIndexBenchmark.searchQuadtreeThroughput:gc.time                  0.1   100000  thrpt    5         9,000                    ms
+GeoIndexBenchmark.searchQuadtreeThroughput                          0.1  1000000  thrpt    5   6833084,785 ± 1656140,425   ops/s
+GeoIndexBenchmark.searchQuadtreeThroughput:gc.alloc.rate            0.1  1000000  thrpt    5      3312,102 ±     802,689  MB/sec
+GeoIndexBenchmark.searchQuadtreeThroughput:gc.alloc.rate.norm       0.1  1000000  thrpt    5       508,370 ±       0,001    B/op
+GeoIndexBenchmark.searchQuadtreeThroughput:gc.count                 0.1  1000000  thrpt    5        50,000                counts
+GeoIndexBenchmark.searchQuadtreeThroughput:gc.time                  0.1  1000000  thrpt    5        21,000                    ms
+GeoIndexBenchmark.searchQuadtreeThroughput                          1.0    10000  thrpt    5  11519801,792 ±  623831,499   ops/s
+GeoIndexBenchmark.searchQuadtreeThroughput:gc.alloc.rate            1.0    10000  thrpt    5      4398,532 ±     238,074  MB/sec
+GeoIndexBenchmark.searchQuadtreeThroughput:gc.alloc.rate.norm       1.0    10000  thrpt    5       400,433 ±       0,001    B/op
+GeoIndexBenchmark.searchQuadtreeThroughput:gc.count                 1.0    10000  thrpt    5        36,000                counts
+GeoIndexBenchmark.searchQuadtreeThroughput:gc.time                  1.0    10000  thrpt    5        12,000                    ms
+GeoIndexBenchmark.searchQuadtreeThroughput                          1.0   100000  thrpt    5   4096056,184 ±  222462,438   ops/s
+GeoIndexBenchmark.searchQuadtreeThroughput:gc.alloc.rate            1.0   100000  thrpt    5      2622,839 ±     142,359  MB/sec
+GeoIndexBenchmark.searchQuadtreeThroughput:gc.alloc.rate.norm       1.0   100000  thrpt    5       671,555 ±       0,001    B/op
+GeoIndexBenchmark.searchQuadtreeThroughput:gc.count                 1.0   100000  thrpt    5        22,000                counts
+GeoIndexBenchmark.searchQuadtreeThroughput:gc.time                  1.0   100000  thrpt    5        12,000                    ms
+GeoIndexBenchmark.searchQuadtreeThroughput                          1.0  1000000  thrpt    5    672901,254 ±  119626,944   ops/s
+GeoIndexBenchmark.searchQuadtreeThroughput:gc.alloc.rate            1.0  1000000  thrpt    5      2137,591 ±     380,064  MB/sec
+GeoIndexBenchmark.searchQuadtreeThroughput:gc.alloc.rate.norm       1.0  1000000  thrpt    5      3331,733 ±       0,004    B/op
+GeoIndexBenchmark.searchQuadtreeThroughput:gc.count                 1.0  1000000  thrpt    5        33,000                counts
+GeoIndexBenchmark.searchQuadtreeThroughput:gc.time                  1.0  1000000  thrpt    5        14,000                    ms
+GeoIndexBenchmark.searchQuadtreeThroughput                         10.0    10000  thrpt    5    858738,012 ±   74516,754   ops/s
+GeoIndexBenchmark.searchQuadtreeThroughput:gc.alloc.rate           10.0    10000  thrpt    5      2611,588 ±     226,688  MB/sec
+GeoIndexBenchmark.searchQuadtreeThroughput:gc.alloc.rate.norm      10.0    10000  thrpt    5      3189,504 ±       0,002    B/op
+GeoIndexBenchmark.searchQuadtreeThroughput:gc.count                10.0    10000  thrpt    5       103,000                counts
+GeoIndexBenchmark.searchQuadtreeThroughput:gc.time                 10.0    10000  thrpt    5        21,000                    ms
+GeoIndexBenchmark.searchQuadtreeThroughput                         10.0   100000  thrpt    5     94569,062 ±    7510,401   ops/s
+GeoIndexBenchmark.searchQuadtreeThroughput:gc.alloc.rate           10.0   100000  thrpt    5      2165,955 ±     172,063  MB/sec
+GeoIndexBenchmark.searchQuadtreeThroughput:gc.alloc.rate.norm      10.0   100000  thrpt    5     24019,778 ±       0,010    B/op
+GeoIndexBenchmark.searchQuadtreeThroughput:gc.count                10.0   100000  thrpt    5        77,000                counts
+GeoIndexBenchmark.searchQuadtreeThroughput:gc.time                 10.0   100000  thrpt    5        17,000                    ms
+GeoIndexBenchmark.searchQuadtreeThroughput                         10.0  1000000  thrpt    5      5163,564 ±     357,730   ops/s
+GeoIndexBenchmark.searchQuadtreeThroughput:gc.alloc.rate           10.0  1000000  thrpt    5      1117,896 ±      77,385  MB/sec
+GeoIndexBenchmark.searchQuadtreeThroughput:gc.alloc.rate.norm      10.0  1000000  thrpt    5    227060,541 ±       0,001    B/op
+GeoIndexBenchmark.searchQuadtreeThroughput:gc.count                10.0  1000000  thrpt    5        27,000                counts
+GeoIndexBenchmark.searchQuadtreeThroughput:gc.time                 10.0  1000000  thrpt    5        20,000                    ms
+GeoIndexBenchmark.buildNaive                                        N/A    10000   avgt    5         0,033 ±       0,035   ms/op
+GeoIndexBenchmark.buildNaive:gc.alloc.rate                          N/A    10000   avgt    5      5275,018 ±    7060,281  MB/sec
+GeoIndexBenchmark.buildNaive:gc.alloc.rate.norm                     N/A    10000   avgt    5    168968,458 ±       0,482    B/op
+GeoIndexBenchmark.buildNaive:gc.count                               N/A    10000   avgt    5        44,000                counts
+GeoIndexBenchmark.buildNaive:gc.time                                N/A    10000   avgt    5        16,000                    ms
+GeoIndexBenchmark.buildNaive                                        N/A   100000   avgt    5         0,410 ±       0,084   ms/op
+GeoIndexBenchmark.buildNaive:gc.alloc.rate                          N/A   100000   avgt    5      2987,882 ±     585,158  MB/sec
+GeoIndexBenchmark.buildNaive:gc.alloc.rate.norm                     N/A   100000   avgt    5   1280957,685 ±       1,143    B/op
+GeoIndexBenchmark.buildNaive:gc.count                               N/A   100000   avgt    5        25,000                counts
+GeoIndexBenchmark.buildNaive:gc.time                                N/A   100000   avgt    5        10,000                    ms
+GeoIndexBenchmark.buildNaive                                        N/A   300000   avgt    5         1,228 ±       0,045   ms/op
+GeoIndexBenchmark.buildNaive:gc.alloc.rate                          N/A   300000   avgt    5      3357,414 ±     122,402  MB/sec
+GeoIndexBenchmark.buildNaive:gc.alloc.rate.norm                     N/A   300000   avgt    5   4322257,008 ±       0,570    B/op
+GeoIndexBenchmark.buildNaive:gc.count                               N/A   300000   avgt    5        20,000                counts
+GeoIndexBenchmark.buildNaive:gc.time                                N/A   300000   avgt    5        17,000                    ms
+GeoIndexBenchmark.buildQuadtree                                     N/A    10000   avgt    5         0,577 ±       0,077   ms/op
+GeoIndexBenchmark.buildQuadtree:gc.alloc.rate                       N/A    10000   avgt    5      1080,156 ±     143,199  MB/sec
+GeoIndexBenchmark.buildQuadtree:gc.alloc.rate.norm                  N/A    10000   avgt    5    653264,009 ±       1,033    B/op
+GeoIndexBenchmark.buildQuadtree:gc.count                            N/A    10000   avgt    5         6,000                counts
+GeoIndexBenchmark.buildQuadtree:gc.time                             N/A    10000   avgt    5         3,000                    ms
+GeoIndexBenchmark.buildQuadtree                                     N/A   100000   avgt    5        10,530 ±       0,649   ms/op
+GeoIndexBenchmark.buildQuadtree:gc.alloc.rate                       N/A   100000   avgt    5       481,980 ±      29,278  MB/sec
+GeoIndexBenchmark.buildQuadtree:gc.alloc.rate.norm                  N/A   100000   avgt    5   5321464,201 ±       9,630    B/op
+GeoIndexBenchmark.buildQuadtree:gc.count                            N/A   100000   avgt    5         3,000                counts
+GeoIndexBenchmark.buildQuadtree:gc.time                             N/A   100000   avgt    5         2,000                    ms
+GeoIndexBenchmark.buildQuadtree                                     N/A   300000   avgt    5        48,377 ±       4,802   ms/op
+GeoIndexBenchmark.buildQuadtree:gc.alloc.rate                       N/A   300000   avgt    5       316,575 ±      31,448  MB/sec
+GeoIndexBenchmark.buildQuadtree:gc.alloc.rate.norm                  N/A   300000   avgt    5  16053089,309 ±      10,737    B/op
+GeoIndexBenchmark.buildQuadtree:gc.count                            N/A   300000   avgt    5         2,000                counts
+GeoIndexBenchmark.buildQuadtree:gc.time                             N/A   300000   avgt    5         5,000                    ms
+GeoIndexBenchmark.searchNaiveAverage                                0.1    10000   avgt    5         9,915 ±       0,968   us/op
+GeoIndexBenchmark.searchNaiveAverage:gc.alloc.rate                  0.1    10000   avgt    5         2,333 ±       0,221  MB/sec
+GeoIndexBenchmark.searchNaiveAverage:gc.alloc.rate.norm             0.1    10000   avgt    5        24,248 ±       0,014    B/op
+GeoIndexBenchmark.searchNaiveAverage:gc.count                       0.1    10000   avgt    5           ≈ 0                counts
+GeoIndexBenchmark.searchNaiveAverage                                0.1   100000   avgt    5        97,835 ±      10,445   us/op
+GeoIndexBenchmark.searchNaiveAverage:gc.alloc.rate                  0.1   100000   avgt    5         0,271 ±       0,027  MB/sec
+GeoIndexBenchmark.searchNaiveAverage:gc.alloc.rate.norm             0.1   100000   avgt    5        27,752 ±       0,217    B/op
+GeoIndexBenchmark.searchNaiveAverage:gc.count                       0.1   100000   avgt    5           ≈ 0                counts
+GeoIndexBenchmark.searchNaiveAverage                                0.1  1000000   avgt    5      1017,061 ±      30,965   us/op
+GeoIndexBenchmark.searchNaiveAverage:gc.alloc.rate                  0.1  1000000   avgt    5         0,055 ±       0,010  MB/sec
+GeoIndexBenchmark.searchNaiveAverage:gc.alloc.rate.norm             0.1  1000000   avgt    5        59,123 ±      11,958    B/op
+GeoIndexBenchmark.searchNaiveAverage:gc.count                       0.1  1000000   avgt    5           ≈ 0                counts
+GeoIndexBenchmark.searchNaiveAverage                                1.0    10000   avgt    5         9,872 ±       0,202   us/op
+GeoIndexBenchmark.searchNaiveAverage:gc.alloc.rate                  1.0    10000   avgt    5         4,452 ±       0,091  MB/sec
+GeoIndexBenchmark.searchNaiveAverage:gc.alloc.rate.norm             1.0    10000   avgt    5        46,087 ±       0,004    B/op
+GeoIndexBenchmark.searchNaiveAverage:gc.count                       1.0    10000   avgt    5           ≈ 0                counts
+GeoIndexBenchmark.searchNaiveAverage                                1.0   100000   avgt    5       101,445 ±       6,437   us/op
+GeoIndexBenchmark.searchNaiveAverage:gc.alloc.rate                  1.0   100000   avgt    5         0,765 ±       0,046  MB/sec
+GeoIndexBenchmark.searchNaiveAverage:gc.alloc.rate.norm             1.0   100000   avgt    5        81,418 ±       0,266    B/op
+GeoIndexBenchmark.searchNaiveAverage:gc.count                       1.0   100000   avgt    5           ≈ 0                counts
+GeoIndexBenchmark.searchNaiveAverage                                1.0  1000000   avgt    5      1022,253 ±      63,152   us/op
+GeoIndexBenchmark.searchNaiveAverage:gc.alloc.rate                  1.0  1000000   avgt    5         0,726 ±       0,037  MB/sec
+GeoIndexBenchmark.searchNaiveAverage:gc.alloc.rate.norm             1.0  1000000   avgt    5       777,779 ±      11,958    B/op
+GeoIndexBenchmark.searchNaiveAverage:gc.count                       1.0  1000000   avgt    5           ≈ 0                counts
+GeoIndexBenchmark.searchNaiveAverage                               10.0    10000   avgt    5        11,679 ±       2,038   us/op
+GeoIndexBenchmark.searchNaiveAverage:gc.alloc.rate                 10.0    10000   avgt    5        60,918 ±      10,901  MB/sec
+GeoIndexBenchmark.searchNaiveAverage:gc.alloc.rate.norm            10.0    10000   avgt    5       744,880 ±       0,025    B/op
+GeoIndexBenchmark.searchNaiveAverage:gc.count                      10.0    10000   avgt    5         1,000                counts
+GeoIndexBenchmark.searchNaiveAverage:gc.time                       10.0    10000   avgt    5        14,000                    ms
+GeoIndexBenchmark.searchNaiveAverage                               10.0   100000   avgt    5       105,771 ±       9,385   us/op
+GeoIndexBenchmark.searchNaiveAverage:gc.alloc.rate                 10.0   100000   avgt    5        59,526 ±       5,149  MB/sec
+GeoIndexBenchmark.searchNaiveAverage:gc.alloc.rate.norm            10.0   100000   avgt    5      6600,320 ±       0,168    B/op
+GeoIndexBenchmark.searchNaiveAverage:gc.count                      10.0   100000   avgt    5           ≈ 0                counts
+GeoIndexBenchmark.searchNaiveAverage                               10.0  1000000   avgt    5      1079,162 ±      20,996   us/op
+GeoIndexBenchmark.searchNaiveAverage:gc.alloc.rate                 10.0  1000000   avgt    5        64,697 ±       1,257  MB/sec
+GeoIndexBenchmark.searchNaiveAverage:gc.alloc.rate.norm            10.0  1000000   avgt    5     73220,512 ±       0,001    B/op
+GeoIndexBenchmark.searchNaiveAverage:gc.count                      10.0  1000000   avgt    5           ≈ 0                counts
+GeoIndexBenchmark.searchQuadtreeAverage                             0.1    10000   avgt    5         0,061 ±       0,007   us/op
+GeoIndexBenchmark.searchQuadtreeAverage:gc.alloc.rate               0.1    10000   avgt    5      4685,249 ±     563,490  MB/sec
+GeoIndexBenchmark.searchQuadtreeAverage:gc.alloc.rate.norm          0.1    10000   avgt    5       299,585 ±       0,001    B/op
+GeoIndexBenchmark.searchQuadtreeAverage:gc.count                    0.1    10000   avgt    5        15,000                counts
+GeoIndexBenchmark.searchQuadtreeAverage:gc.time                     0.1    10000   avgt    5        17,000                    ms
+GeoIndexBenchmark.searchQuadtreeAverage                             0.1   100000   avgt    5         0,085 ±       0,005   us/op
+GeoIndexBenchmark.searchQuadtreeAverage:gc.alloc.rate               0.1   100000   avgt    5      4036,308 ±     251,510  MB/sec
+GeoIndexBenchmark.searchQuadtreeAverage:gc.alloc.rate.norm          0.1   100000   avgt    5       360,993 ±       0,001    B/op
+GeoIndexBenchmark.searchQuadtreeAverage:gc.count                    0.1   100000   avgt    5        14,000                counts
+GeoIndexBenchmark.searchQuadtreeAverage:gc.time                     0.1   100000   avgt    5        12,000                    ms
+GeoIndexBenchmark.searchQuadtreeAverage                             0.1  1000000   avgt    5         0,146 ±       0,014   us/op
+GeoIndexBenchmark.searchQuadtreeAverage:gc.alloc.rate               0.1  1000000   avgt    5      3315,704 ±     317,997  MB/sec
+GeoIndexBenchmark.searchQuadtreeAverage:gc.alloc.rate.norm          0.1  1000000   avgt    5       508,370 ±       0,001    B/op
+GeoIndexBenchmark.searchQuadtreeAverage:gc.count                    0.1  1000000   avgt    5        11,000                counts
+GeoIndexBenchmark.searchQuadtreeAverage:gc.time                     0.1  1000000   avgt    5         4,000                    ms
+GeoIndexBenchmark.searchQuadtreeAverage                             1.0    10000   avgt    5         0,087 ±       0,002   us/op
+GeoIndexBenchmark.searchQuadtreeAverage:gc.alloc.rate               1.0    10000   avgt    5      4397,379 ±      80,180  MB/sec
+GeoIndexBenchmark.searchQuadtreeAverage:gc.alloc.rate.norm          1.0    10000   avgt    5       400,433 ±       0,001    B/op
+GeoIndexBenchmark.searchQuadtreeAverage:gc.count                    1.0    10000   avgt    5        15,000                counts
+GeoIndexBenchmark.searchQuadtreeAverage:gc.time                     1.0    10000   avgt    5         7,000                    ms
+GeoIndexBenchmark.searchQuadtreeAverage                             1.0   100000   avgt    5         0,248 ±       0,025   us/op
+GeoIndexBenchmark.searchQuadtreeAverage:gc.alloc.rate               1.0   100000   avgt    5      2586,728 ±     258,406  MB/sec
+GeoIndexBenchmark.searchQuadtreeAverage:gc.alloc.rate.norm          1.0   100000   avgt    5       671,555 ±       0,001    B/op
+GeoIndexBenchmark.searchQuadtreeAverage:gc.count                    1.0   100000   avgt    5         9,000                counts
+GeoIndexBenchmark.searchQuadtreeAverage:gc.time                     1.0   100000   avgt    5        12,000                    ms
+GeoIndexBenchmark.searchQuadtreeAverage                             1.0  1000000   avgt    5         1,463 ±       0,111   us/op
+GeoIndexBenchmark.searchQuadtreeAverage:gc.alloc.rate               1.0  1000000   avgt    5      2171,863 ±     161,243  MB/sec
+GeoIndexBenchmark.searchQuadtreeAverage:gc.alloc.rate.norm          1.0  1000000   avgt    5      3331,732 ±       0,002    B/op
+GeoIndexBenchmark.searchQuadtreeAverage:gc.count                    1.0  1000000   avgt    5        15,000                counts
+GeoIndexBenchmark.searchQuadtreeAverage:gc.time                     1.0  1000000   avgt    5         6,000                    ms
+GeoIndexBenchmark.searchQuadtreeAverage                            10.0    10000   avgt    5         1,242 ±       0,473   us/op
+GeoIndexBenchmark.searchQuadtreeAverage:gc.alloc.rate              10.0    10000   avgt    5      2466,083 ±     850,488  MB/sec
+GeoIndexBenchmark.searchQuadtreeAverage:gc.alloc.rate.norm         10.0    10000   avgt    5      3189,505 ±       0,007    B/op
+GeoIndexBenchmark.searchQuadtreeAverage:gc.count                   10.0    10000   avgt    5        17,000                counts
+GeoIndexBenchmark.searchQuadtreeAverage:gc.time                    10.0    10000   avgt    5         7,000                    ms
+GeoIndexBenchmark.searchQuadtreeAverage                            10.0   100000   avgt    5        10,517 ±       0,291   us/op
+GeoIndexBenchmark.searchQuadtreeAverage:gc.alloc.rate              10.0   100000   avgt    5      2177,874 ±      60,359  MB/sec
+GeoIndexBenchmark.searchQuadtreeAverage:gc.alloc.rate.norm         10.0   100000   avgt    5     24019,777 ±       0,005    B/op
+GeoIndexBenchmark.searchQuadtreeAverage:gc.count                   10.0   100000   avgt    5        14,000                counts
+GeoIndexBenchmark.searchQuadtreeAverage:gc.time                    10.0   100000   avgt    5        11,000                    ms
+GeoIndexBenchmark.searchQuadtreeAverage                            10.0  1000000   avgt    5       111,296 ±       1,974   us/op
+GeoIndexBenchmark.searchQuadtreeAverage:gc.alloc.rate              10.0  1000000   avgt    5      1945,364 ±      34,364  MB/sec
+GeoIndexBenchmark.searchQuadtreeAverage:gc.alloc.rate.norm         10.0  1000000   avgt    5    227059,639 ±       0,268    B/op
+GeoIndexBenchmark.searchQuadtreeAverage:gc.count                   10.0  1000000   avgt    5        14,000                counts
+GeoIndexBenchmark.searchQuadtreeAverage:gc.time                    10.0  1000000   avgt    5         5,000                    ms
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  03:01 min
+[INFO] Finished at: 2026-03-27T14:46:26+03:00
+[INFO] ------------------------------------------------------------------------
