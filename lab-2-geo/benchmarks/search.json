@@ -1,0 +1,2164 @@
+[
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 0,
+        "jvm" : "/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "--enable-native-access=ALL-UNNAMED",
+            "-Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf",
+            "-Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec",
+            "-Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native",
+            "-Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search"
+        ],
+        "jdkVersion" : "25.0.2",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.0.2",
+        "warmupIterations" : 3,
+        "warmupTime" : "500 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "500 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "radius" : "0.1",
+            "size" : "10000"
+        },
+        "primaryMetric" : {
+            "score" : 90410.90172849772,
+            "scoreError" : 7399.790149094938,
+            "scoreConfidence" : [
+                83011.11157940277,
+                97810.69187759266
+            ],
+            "scorePercentiles" : {
+                "0.0" : 87556.74370559587,
+                "50.0" : 90393.16806449105,
+                "90.0" : 92589.50443210028,
+                "95.0" : 92589.50443210028,
+                "99.0" : 92589.50443210028,
+                "99.9" : 92589.50443210028,
+                "99.99" : 92589.50443210028,
+                "99.999" : 92589.50443210028,
+                "99.9999" : 92589.50443210028,
+                "100.0" : 92589.50443210028
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    91662.6946329929,
+                    89852.39780730844,
+                    90393.16806449105,
+                    87556.74370559587,
+                    92589.50443210028
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 0,
+        "jvm" : "/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "--enable-native-access=ALL-UNNAMED",
+            "-Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf",
+            "-Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec",
+            "-Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native",
+            "-Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search"
+        ],
+        "jdkVersion" : "25.0.2",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.0.2",
+        "warmupIterations" : 3,
+        "warmupTime" : "500 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "500 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "radius" : "0.1",
+            "size" : "100000"
+        },
+        "primaryMetric" : {
+            "score" : 9076.118803984,
+            "scoreError" : 1117.2100131301743,
+            "scoreConfidence" : [
+                7958.908790853826,
+                10193.328817114174
+            ],
+            "scorePercentiles" : {
+                "0.0" : 8628.624022089278,
+                "50.0" : 9079.571314650306,
+                "90.0" : 9339.298343185126,
+                "95.0" : 9339.298343185126,
+                "99.0" : 9339.298343185126,
+                "99.9" : 9339.298343185126,
+                "99.99" : 9339.298343185126,
+                "99.999" : 9339.298343185126,
+                "99.9999" : 9339.298343185126,
+                "100.0" : 9339.298343185126
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    9339.298343185126,
+                    9079.571314650306,
+                    9007.12509170807,
+                    9325.975248287212,
+                    8628.624022089278
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 0,
+        "jvm" : "/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "--enable-native-access=ALL-UNNAMED",
+            "-Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf",
+            "-Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec",
+            "-Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native",
+            "-Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search"
+        ],
+        "jdkVersion" : "25.0.2",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.0.2",
+        "warmupIterations" : 3,
+        "warmupTime" : "500 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "500 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "radius" : "0.1",
+            "size" : "1000000"
+        },
+        "primaryMetric" : {
+            "score" : 849.4696555850174,
+            "scoreError" : 124.47495206940509,
+            "scoreConfidence" : [
+                724.9947035156124,
+                973.9446076544225
+            ],
+            "scorePercentiles" : {
+                "0.0" : 792.9058183598634,
+                "50.0" : 860.0986485672461,
+                "90.0" : 873.6120024113299,
+                "95.0" : 873.6120024113299,
+                "99.0" : 873.6120024113299,
+                "99.9" : 873.6120024113299,
+                "99.99" : 873.6120024113299,
+                "99.999" : 873.6120024113299,
+                "99.9999" : 873.6120024113299,
+                "100.0" : 873.6120024113299
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    855.5149334631644,
+                    865.2168751234838,
+                    873.6120024113299,
+                    860.0986485672461,
+                    792.9058183598634
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 0,
+        "jvm" : "/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "--enable-native-access=ALL-UNNAMED",
+            "-Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf",
+            "-Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec",
+            "-Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native",
+            "-Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search"
+        ],
+        "jdkVersion" : "25.0.2",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.0.2",
+        "warmupIterations" : 3,
+        "warmupTime" : "500 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "500 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "radius" : "1.0",
+            "size" : "10000"
+        },
+        "primaryMetric" : {
+            "score" : 85784.6906011715,
+            "scoreError" : 4189.054793603139,
+            "scoreConfidence" : [
+                81595.63580756837,
+                89973.74539477464
+            ],
+            "scorePercentiles" : {
+                "0.0" : 84623.55555708622,
+                "50.0" : 85994.24864601811,
+                "90.0" : 87184.55570139132,
+                "95.0" : 87184.55570139132,
+                "99.0" : 87184.55570139132,
+                "99.9" : 87184.55570139132,
+                "99.99" : 87184.55570139132,
+                "99.999" : 87184.55570139132,
+                "99.9999" : 87184.55570139132,
+                "100.0" : 87184.55570139132
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    86361.08255579736,
+                    84623.55555708622,
+                    85994.24864601811,
+                    84760.01054556455,
+                    87184.55570139132
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 0,
+        "jvm" : "/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "--enable-native-access=ALL-UNNAMED",
+            "-Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf",
+            "-Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec",
+            "-Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native",
+            "-Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search"
+        ],
+        "jdkVersion" : "25.0.2",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.0.2",
+        "warmupIterations" : 3,
+        "warmupTime" : "500 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "500 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "radius" : "1.0",
+            "size" : "100000"
+        },
+        "primaryMetric" : {
+            "score" : 8975.758710429262,
+            "scoreError" : 324.0539717804098,
+            "scoreConfidence" : [
+                8651.704738648852,
+                9299.812682209671
+            ],
+            "scorePercentiles" : {
+                "0.0" : 8901.37851198326,
+                "50.0" : 8959.620112107246,
+                "90.0" : 9119.270719226559,
+                "95.0" : 9119.270719226559,
+                "99.0" : 9119.270719226559,
+                "99.9" : 9119.270719226559,
+                "99.99" : 9119.270719226559,
+                "99.999" : 9119.270719226559,
+                "99.9999" : 9119.270719226559,
+                "100.0" : 9119.270719226559
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    8965.634046896312,
+                    9119.270719226559,
+                    8959.620112107246,
+                    8901.37851198326,
+                    8932.890161932932
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 0,
+        "jvm" : "/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "--enable-native-access=ALL-UNNAMED",
+            "-Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf",
+            "-Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec",
+            "-Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native",
+            "-Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search"
+        ],
+        "jdkVersion" : "25.0.2",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.0.2",
+        "warmupIterations" : 3,
+        "warmupTime" : "500 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "500 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "radius" : "1.0",
+            "size" : "1000000"
+        },
+        "primaryMetric" : {
+            "score" : 782.0460145750724,
+            "scoreError" : 88.7789025396604,
+            "scoreConfidence" : [
+                693.267112035412,
+                870.8249171147328
+            ],
+            "scorePercentiles" : {
+                "0.0" : 749.8398619495624,
+                "50.0" : 792.4593800299278,
+                "90.0" : 806.4208297390686,
+                "95.0" : 806.4208297390686,
+                "99.0" : 806.4208297390686,
+                "99.9" : 806.4208297390686,
+                "99.99" : 806.4208297390686,
+                "99.999" : 806.4208297390686,
+                "99.9999" : 806.4208297390686,
+                "100.0" : 806.4208297390686
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    794.5952154698205,
+                    749.8398619495624,
+                    806.4208297390686,
+                    766.9147856869822,
+                    792.4593800299278
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 0,
+        "jvm" : "/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "--enable-native-access=ALL-UNNAMED",
+            "-Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf",
+            "-Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec",
+            "-Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native",
+            "-Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search"
+        ],
+        "jdkVersion" : "25.0.2",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.0.2",
+        "warmupIterations" : 3,
+        "warmupTime" : "500 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "500 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "radius" : "10.0",
+            "size" : "10000"
+        },
+        "primaryMetric" : {
+            "score" : 74865.19120879503,
+            "scoreError" : 10905.360679924004,
+            "scoreConfidence" : [
+                63959.830528871025,
+                85770.55188871904
+            ],
+            "scorePercentiles" : {
+                "0.0" : 70342.58397823134,
+                "50.0" : 75337.57588771141,
+                "90.0" : 78138.74181666557,
+                "95.0" : 78138.74181666557,
+                "99.0" : 78138.74181666557,
+                "99.9" : 78138.74181666557,
+                "99.99" : 78138.74181666557,
+                "99.999" : 78138.74181666557,
+                "99.9999" : 78138.74181666557,
+                "100.0" : 78138.74181666557
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    75693.98863665327,
+                    78138.74181666557,
+                    75337.57588771141,
+                    74813.06572471347,
+                    70342.58397823134
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 0,
+        "jvm" : "/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "--enable-native-access=ALL-UNNAMED",
+            "-Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf",
+            "-Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec",
+            "-Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native",
+            "-Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search"
+        ],
+        "jdkVersion" : "25.0.2",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.0.2",
+        "warmupIterations" : 3,
+        "warmupTime" : "500 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "500 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "radius" : "10.0",
+            "size" : "100000"
+        },
+        "primaryMetric" : {
+            "score" : 5917.377457006763,
+            "scoreError" : 430.99241326101014,
+            "scoreConfidence" : [
+                5486.385043745752,
+                6348.369870267773
+            ],
+            "scorePercentiles" : {
+                "0.0" : 5756.795073362408,
+                "50.0" : 5923.144662893047,
+                "90.0" : 6053.857712722831,
+                "95.0" : 6053.857712722831,
+                "99.0" : 6053.857712722831,
+                "99.9" : 6053.857712722831,
+                "99.99" : 6053.857712722831,
+                "99.999" : 6053.857712722831,
+                "99.9999" : 6053.857712722831,
+                "100.0" : 6053.857712722831
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    5874.123409458709,
+                    5978.966426596815,
+                    6053.857712722831,
+                    5923.144662893047,
+                    5756.795073362408
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "geosearch.benchmark.GeoIndexBenchmark.searchNaiveThroughput",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 0,
+        "jvm" : "/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "--enable-native-access=ALL-UNNAMED",
+            "-Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf",
+            "-Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec",
+            "-Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native",
+            "-Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search"
+        ],
+        "jdkVersion" : "25.0.2",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.0.2",
+        "warmupIterations" : 3,
+        "warmupTime" : "500 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "500 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "radius" : "10.0",
+            "size" : "1000000"
+        },
+        "primaryMetric" : {
+            "score" : 533.816874338442,
+            "scoreError" : 60.14802910021184,
+            "scoreConfidence" : [
+                473.6688452382301,
+                593.9649034386538
+            ],
+            "scorePercentiles" : {
+                "0.0" : 509.10150491871065,
+                "50.0" : 536.1790623854108,
+                "90.0" : 548.5760180022812,
+                "95.0" : 548.5760180022812,
+                "99.0" : 548.5760180022812,
+                "99.9" : 548.5760180022812,
+                "99.99" : 548.5760180022812,
+                "99.999" : 548.5760180022812,
+                "99.9999" : 548.5760180022812,
+                "100.0" : 548.5760180022812
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    530.1014813023268,
+                    509.10150491871065,
+                    548.5760180022812,
+                    536.1790623854108,
+                    545.1263050834799
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 0,
+        "jvm" : "/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "--enable-native-access=ALL-UNNAMED",
+            "-Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf",
+            "-Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec",
+            "-Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native",
+            "-Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search"
+        ],
+        "jdkVersion" : "25.0.2",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.0.2",
+        "warmupIterations" : 3,
+        "warmupTime" : "500 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "500 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "radius" : "0.1",
+            "size" : "10000"
+        },
+        "primaryMetric" : {
+            "score" : 1.4356269154654775E7,
+            "scoreError" : 2618905.354061267,
+            "scoreConfidence" : [
+                1.1737363800593508E7,
+                1.6975174508716043E7
+            ],
+            "scorePercentiles" : {
+                "0.0" : 1.3178347282028139E7,
+                "50.0" : 1.4585849135961624E7,
+                "90.0" : 1.486337211962E7,
+                "95.0" : 1.486337211962E7,
+                "99.0" : 1.486337211962E7,
+                "99.9" : 1.486337211962E7,
+                "99.99" : 1.486337211962E7,
+                "99.999" : 1.486337211962E7,
+                "99.9999" : 1.486337211962E7,
+                "100.0" : 1.486337211962E7
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    1.3178347282028139E7,
+                    1.4585849135961624E7,
+                    1.441022386835647E7,
+                    1.4743553367307639E7,
+                    1.486337211962E7
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 0,
+        "jvm" : "/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "--enable-native-access=ALL-UNNAMED",
+            "-Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf",
+            "-Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec",
+            "-Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native",
+            "-Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search"
+        ],
+        "jdkVersion" : "25.0.2",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.0.2",
+        "warmupIterations" : 3,
+        "warmupTime" : "500 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "500 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "radius" : "0.1",
+            "size" : "100000"
+        },
+        "primaryMetric" : {
+            "score" : 1.0354752749397378E7,
+            "scoreError" : 530529.2998056228,
+            "scoreConfidence" : [
+                9824223.449591756,
+                1.0885282049203001E7
+            ],
+            "scorePercentiles" : {
+                "0.0" : 1.0206934812685156E7,
+                "50.0" : 1.0373219825725526E7,
+                "90.0" : 1.0545723718635315E7,
+                "95.0" : 1.0545723718635315E7,
+                "99.0" : 1.0545723718635315E7,
+                "99.9" : 1.0545723718635315E7,
+                "99.99" : 1.0545723718635315E7,
+                "99.999" : 1.0545723718635315E7,
+                "99.9999" : 1.0545723718635315E7,
+                "100.0" : 1.0545723718635315E7
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    1.0206934812685156E7,
+                    1.0373219825725526E7,
+                    1.0236278127083208E7,
+                    1.0545723718635315E7,
+                    1.0411607262857683E7
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 0,
+        "jvm" : "/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "--enable-native-access=ALL-UNNAMED",
+            "-Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf",
+            "-Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec",
+            "-Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native",
+            "-Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search"
+        ],
+        "jdkVersion" : "25.0.2",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.0.2",
+        "warmupIterations" : 3,
+        "warmupTime" : "500 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "500 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "radius" : "0.1",
+            "size" : "1000000"
+        },
+        "primaryMetric" : {
+            "score" : 6226002.469575363,
+            "scoreError" : 119225.50980468029,
+            "scoreConfidence" : [
+                6106776.959770683,
+                6345227.979380043
+            ],
+            "scorePercentiles" : {
+                "0.0" : 6184498.432217273,
+                "50.0" : 6220617.0874324795,
+                "90.0" : 6270461.414487003,
+                "95.0" : 6270461.414487003,
+                "99.0" : 6270461.414487003,
+                "99.9" : 6270461.414487003,
+                "99.99" : 6270461.414487003,
+                "99.999" : 6270461.414487003,
+                "99.9999" : 6270461.414487003,
+                "100.0" : 6270461.414487003
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    6220021.757226257,
+                    6184498.432217273,
+                    6220617.0874324795,
+                    6234413.656513802,
+                    6270461.414487003
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 0,
+        "jvm" : "/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "--enable-native-access=ALL-UNNAMED",
+            "-Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf",
+            "-Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec",
+            "-Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native",
+            "-Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search"
+        ],
+        "jdkVersion" : "25.0.2",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.0.2",
+        "warmupIterations" : 3,
+        "warmupTime" : "500 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "500 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "radius" : "1.0",
+            "size" : "10000"
+        },
+        "primaryMetric" : {
+            "score" : 1.008687314725489E7,
+            "scoreError" : 502927.21571826277,
+            "scoreConfidence" : [
+                9583945.931536628,
+                1.0589800362973152E7
+            ],
+            "scorePercentiles" : {
+                "0.0" : 9876464.985872379,
+                "50.0" : 1.0119700608271256E7,
+                "90.0" : 1.0191970229079733E7,
+                "95.0" : 1.0191970229079733E7,
+                "99.0" : 1.0191970229079733E7,
+                "99.9" : 1.0191970229079733E7,
+                "99.99" : 1.0191970229079733E7,
+                "99.999" : 1.0191970229079733E7,
+                "99.9999" : 1.0191970229079733E7,
+                "100.0" : 1.0191970229079733E7
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    1.0191970229079733E7,
+                    1.0190985626776587E7,
+                    1.0119700608271256E7,
+                    1.0055244286274495E7,
+                    9876464.985872379
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 0,
+        "jvm" : "/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "--enable-native-access=ALL-UNNAMED",
+            "-Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf",
+            "-Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec",
+            "-Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native",
+            "-Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search"
+        ],
+        "jdkVersion" : "25.0.2",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.0.2",
+        "warmupIterations" : 3,
+        "warmupTime" : "500 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "500 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "radius" : "1.0",
+            "size" : "100000"
+        },
+        "primaryMetric" : {
+            "score" : 3524214.802651291,
+            "scoreError" : 1484534.045861675,
+            "scoreConfidence" : [
+                2039680.7567896158,
+                5008748.848512966
+            ],
+            "scorePercentiles" : {
+                "0.0" : 2853121.6555452044,
+                "50.0" : 3635646.948808073,
+                "90.0" : 3801317.16550517,
+                "95.0" : 3801317.16550517,
+                "99.0" : 3801317.16550517,
+                "99.9" : 3801317.16550517,
+                "99.99" : 3801317.16550517,
+                "99.999" : 3801317.16550517,
+                "99.9999" : 3801317.16550517,
+                "100.0" : 3801317.16550517
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    3752215.531836842,
+                    3801317.16550517,
+                    3635646.948808073,
+                    3578772.711561163,
+                    2853121.6555452044
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 0,
+        "jvm" : "/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "--enable-native-access=ALL-UNNAMED",
+            "-Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf",
+            "-Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec",
+            "-Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native",
+            "-Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search"
+        ],
+        "jdkVersion" : "25.0.2",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.0.2",
+        "warmupIterations" : 3,
+        "warmupTime" : "500 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "500 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "radius" : "1.0",
+            "size" : "1000000"
+        },
+        "primaryMetric" : {
+            "score" : 444424.7948056936,
+            "scoreError" : 613296.5176346338,
+            "scoreConfidence" : [
+                -168871.7228289402,
+                1057721.3124403274
+            ],
+            "scorePercentiles" : {
+                "0.0" : 272609.9824850763,
+                "50.0" : 510093.03794515086,
+                "90.0" : 604270.7395271416,
+                "95.0" : 604270.7395271416,
+                "99.0" : 604270.7395271416,
+                "99.9" : 604270.7395271416,
+                "99.99" : 604270.7395271416,
+                "99.999" : 604270.7395271416,
+                "99.9999" : 604270.7395271416,
+                "100.0" : 604270.7395271416
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    272609.9824850763,
+                    275019.8165133077,
+                    510093.03794515086,
+                    560130.3975577916,
+                    604270.7395271416
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 0,
+        "jvm" : "/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "--enable-native-access=ALL-UNNAMED",
+            "-Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf",
+            "-Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec",
+            "-Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native",
+            "-Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search"
+        ],
+        "jdkVersion" : "25.0.2",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.0.2",
+        "warmupIterations" : 3,
+        "warmupTime" : "500 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "500 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "radius" : "10.0",
+            "size" : "10000"
+        },
+        "primaryMetric" : {
+            "score" : 634071.5011808195,
+            "scoreError" : 340290.2982774533,
+            "scoreConfidence" : [
+                293781.2029033662,
+                974361.7994582728
+            ],
+            "scorePercentiles" : {
+                "0.0" : 488927.0561668495,
+                "50.0" : 652075.1251892713,
+                "90.0" : 727731.093059389,
+                "95.0" : 727731.093059389,
+                "99.0" : 727731.093059389,
+                "99.9" : 727731.093059389,
+                "99.99" : 727731.093059389,
+                "99.999" : 727731.093059389,
+                "99.9999" : 727731.093059389,
+                "100.0" : 727731.093059389
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    652075.1251892713,
+                    727731.093059389,
+                    488927.0561668495,
+                    634765.2363555322,
+                    666858.9951330553
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 0,
+        "jvm" : "/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "--enable-native-access=ALL-UNNAMED",
+            "-Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf",
+            "-Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec",
+            "-Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native",
+            "-Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search"
+        ],
+        "jdkVersion" : "25.0.2",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.0.2",
+        "warmupIterations" : 3,
+        "warmupTime" : "500 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "500 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "radius" : "10.0",
+            "size" : "100000"
+        },
+        "primaryMetric" : {
+            "score" : 84105.17281136851,
+            "scoreError" : 5517.930336189695,
+            "scoreConfidence" : [
+                78587.24247517882,
+                89623.1031475582
+            ],
+            "scorePercentiles" : {
+                "0.0" : 81963.22001820074,
+                "50.0" : 84420.22325713345,
+                "90.0" : 85782.79921054661,
+                "95.0" : 85782.79921054661,
+                "99.0" : 85782.79921054661,
+                "99.9" : 85782.79921054661,
+                "99.99" : 85782.79921054661,
+                "99.999" : 85782.79921054661,
+                "99.9999" : 85782.79921054661,
+                "100.0" : 85782.79921054661
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    81963.22001820074,
+                    83587.76383309884,
+                    84771.85773786297,
+                    84420.22325713345,
+                    85782.79921054661
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeThroughput",
+        "mode" : "thrpt",
+        "threads" : 1,
+        "forks" : 0,
+        "jvm" : "/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "--enable-native-access=ALL-UNNAMED",
+            "-Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf",
+            "-Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec",
+            "-Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native",
+            "-Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search"
+        ],
+        "jdkVersion" : "25.0.2",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.0.2",
+        "warmupIterations" : 3,
+        "warmupTime" : "500 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "500 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "radius" : "10.0",
+            "size" : "1000000"
+        },
+        "primaryMetric" : {
+            "score" : 4880.9888245155435,
+            "scoreError" : 178.7261052084044,
+            "scoreConfidence" : [
+                4702.262719307139,
+                5059.7149297239475
+            ],
+            "scorePercentiles" : {
+                "0.0" : 4817.17999381293,
+                "50.0" : 4880.410823144184,
+                "90.0" : 4926.934788815563,
+                "95.0" : 4926.934788815563,
+                "99.0" : 4926.934788815563,
+                "99.9" : 4926.934788815563,
+                "99.99" : 4926.934788815563,
+                "99.999" : 4926.934788815563,
+                "99.9999" : 4926.934788815563,
+                "100.0" : 4926.934788815563
+            },
+            "scoreUnit" : "ops/s",
+            "rawData" : [
+                [
+                    4926.934788815563,
+                    4880.410823144184,
+                    4923.856663200068,
+                    4817.17999381293,
+                    4856.561853604972
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 0,
+        "jvm" : "/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "--enable-native-access=ALL-UNNAMED",
+            "-Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf",
+            "-Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec",
+            "-Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native",
+            "-Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search"
+        ],
+        "jdkVersion" : "25.0.2",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.0.2",
+        "warmupIterations" : 3,
+        "warmupTime" : "500 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "500 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "radius" : "0.1",
+            "size" : "10000"
+        },
+        "primaryMetric" : {
+            "score" : 11.346074809718726,
+            "scoreError" : 1.3256160529124132,
+            "scoreConfidence" : [
+                10.020458756806313,
+                12.671690862631138
+            ],
+            "scorePercentiles" : {
+                "0.0" : 11.032864130434783,
+                "50.0" : 11.200879622222223,
+                "90.0" : 11.753310069767442,
+                "95.0" : 11.753310069767442,
+                "99.0" : 11.753310069767442,
+                "99.9" : 11.753310069767442,
+                "99.99" : 11.753310069767442,
+                "99.999" : 11.753310069767442,
+                "99.9999" : 11.753310069767442,
+                "100.0" : 11.753310069767442
+            },
+            "scoreUnit" : "us/op",
+            "rawData" : [
+                [
+                    11.06529210989011,
+                    11.67802811627907,
+                    11.032864130434783,
+                    11.200879622222223,
+                    11.753310069767442
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 0,
+        "jvm" : "/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "--enable-native-access=ALL-UNNAMED",
+            "-Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf",
+            "-Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec",
+            "-Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native",
+            "-Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search"
+        ],
+        "jdkVersion" : "25.0.2",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.0.2",
+        "warmupIterations" : 3,
+        "warmupTime" : "500 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "500 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "radius" : "0.1",
+            "size" : "100000"
+        },
+        "primaryMetric" : {
+            "score" : 115.10767782222221,
+            "scoreError" : 11.73800058922589,
+            "scoreConfidence" : [
+                103.36967723299632,
+                126.8456784114481
+            ],
+            "scorePercentiles" : {
+                "0.0" : 112.79630555555555,
+                "50.0" : 114.29426866666667,
+                "90.0" : 120.43924066666666,
+                "95.0" : 120.43924066666666,
+                "99.0" : 120.43924066666666,
+                "99.9" : 120.43924066666666,
+                "99.99" : 120.43924066666666,
+                "99.999" : 120.43924066666666,
+                "99.9999" : 120.43924066666666,
+                "100.0" : 120.43924066666666
+            },
+            "scoreUnit" : "us/op",
+            "rawData" : [
+                [
+                    114.39446311111111,
+                    120.43924066666666,
+                    114.29426866666667,
+                    112.79630555555555,
+                    113.61411111111111
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 0,
+        "jvm" : "/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "--enable-native-access=ALL-UNNAMED",
+            "-Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf",
+            "-Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec",
+            "-Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native",
+            "-Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search"
+        ],
+        "jdkVersion" : "25.0.2",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.0.2",
+        "warmupIterations" : 3,
+        "warmupTime" : "500 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "500 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "radius" : "0.1",
+            "size" : "1000000"
+        },
+        "primaryMetric" : {
+            "score" : 1198.5250496,
+            "scoreError" : 56.22413160605034,
+            "scoreConfidence" : [
+                1142.3009179939497,
+                1254.7491812060505
+            ],
+            "scorePercentiles" : {
+                "0.0" : 1184.253416,
+                "50.0" : 1190.671,
+                "90.0" : 1217.313416,
+                "95.0" : 1217.313416,
+                "99.0" : 1217.313416,
+                "99.9" : 1217.313416,
+                "99.99" : 1217.313416,
+                "99.999" : 1217.313416,
+                "99.9999" : 1217.313416,
+                "100.0" : 1217.313416
+            },
+            "scoreUnit" : "us/op",
+            "rawData" : [
+                [
+                    1189.496832,
+                    1217.313416,
+                    1210.890584,
+                    1190.671,
+                    1184.253416
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 0,
+        "jvm" : "/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "--enable-native-access=ALL-UNNAMED",
+            "-Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf",
+            "-Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec",
+            "-Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native",
+            "-Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search"
+        ],
+        "jdkVersion" : "25.0.2",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.0.2",
+        "warmupIterations" : 3,
+        "warmupTime" : "500 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "500 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "radius" : "1.0",
+            "size" : "10000"
+        },
+        "primaryMetric" : {
+            "score" : 11.40220370987719,
+            "scoreError" : 0.8124571414634485,
+            "scoreConfidence" : [
+                10.58974656841374,
+                12.21466085134064
+            ],
+            "scorePercentiles" : {
+                "0.0" : 11.160442577777777,
+                "50.0" : 11.454728449438202,
+                "90.0" : 11.633374528735633,
+                "95.0" : 11.633374528735633,
+                "99.0" : 11.633374528735633,
+                "99.9" : 11.633374528735633,
+                "99.99" : 11.633374528735633,
+                "99.999" : 11.633374528735633,
+                "99.9999" : 11.633374528735633,
+                "100.0" : 11.633374528735633
+            },
+            "scoreUnit" : "us/op",
+            "rawData" : [
+                [
+                    11.633374528735633,
+                    11.558076704545455,
+                    11.160442577777777,
+                    11.454728449438202,
+                    11.204396288888889
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 0,
+        "jvm" : "/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "--enable-native-access=ALL-UNNAMED",
+            "-Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf",
+            "-Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec",
+            "-Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native",
+            "-Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search"
+        ],
+        "jdkVersion" : "25.0.2",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.0.2",
+        "warmupIterations" : 3,
+        "warmupTime" : "500 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "500 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "radius" : "1.0",
+            "size" : "100000"
+        },
+        "primaryMetric" : {
+            "score" : 113.92996283555556,
+            "scoreError" : 9.616597910518976,
+            "scoreConfidence" : [
+                104.31336492503658,
+                123.54656074607453
+            ],
+            "scorePercentiles" : {
+                "0.0" : 110.8223334,
+                "50.0" : 113.40463888888888,
+                "90.0" : 117.47554644444445,
+                "95.0" : 117.47554644444445,
+                "99.0" : 117.47554644444445,
+                "99.9" : 117.47554644444445,
+                "99.99" : 117.47554644444445,
+                "99.999" : 117.47554644444445,
+                "99.9999" : 117.47554644444445,
+                "100.0" : 117.47554644444445
+            },
+            "scoreUnit" : "us/op",
+            "rawData" : [
+                [
+                    117.47554644444445,
+                    113.40463888888888,
+                    110.8223334,
+                    115.07812044444445,
+                    112.869175
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 0,
+        "jvm" : "/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "--enable-native-access=ALL-UNNAMED",
+            "-Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf",
+            "-Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec",
+            "-Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native",
+            "-Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search"
+        ],
+        "jdkVersion" : "25.0.2",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.0.2",
+        "warmupIterations" : 3,
+        "warmupTime" : "500 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "500 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "radius" : "1.0",
+            "size" : "1000000"
+        },
+        "primaryMetric" : {
+            "score" : 1200.0008831999999,
+            "scoreError" : 91.57325940333266,
+            "scoreConfidence" : [
+                1108.4276237966671,
+                1291.5741426033326
+            ],
+            "scorePercentiles" : {
+                "0.0" : 1169.163332,
+                "50.0" : 1201.056166,
+                "90.0" : 1231.430334,
+                "95.0" : 1231.430334,
+                "99.0" : 1231.430334,
+                "99.9" : 1231.430334,
+                "99.99" : 1231.430334,
+                "99.999" : 1231.430334,
+                "99.9999" : 1231.430334,
+                "100.0" : 1231.430334
+            },
+            "scoreUnit" : "us/op",
+            "rawData" : [
+                [
+                    1201.056166,
+                    1231.430334,
+                    1186.509166,
+                    1169.163332,
+                    1211.845418
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 0,
+        "jvm" : "/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "--enable-native-access=ALL-UNNAMED",
+            "-Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf",
+            "-Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec",
+            "-Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native",
+            "-Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search"
+        ],
+        "jdkVersion" : "25.0.2",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.0.2",
+        "warmupIterations" : 3,
+        "warmupTime" : "500 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "500 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "radius" : "10.0",
+            "size" : "10000"
+        },
+        "primaryMetric" : {
+            "score" : 13.434788671179358,
+            "scoreError" : 3.5229451173744253,
+            "scoreConfidence" : [
+                9.911843553804934,
+                16.957733788553785
+            ],
+            "scorePercentiles" : {
+                "0.0" : 11.87001453488372,
+                "50.0" : 13.72062727027027,
+                "90.0" : 14.226725352112677,
+                "95.0" : 14.226725352112677,
+                "99.0" : 14.226725352112677,
+                "99.9" : 14.226725352112677,
+                "99.99" : 14.226725352112677,
+                "99.999" : 14.226725352112677,
+                "99.9999" : 14.226725352112677,
+                "100.0" : 14.226725352112677
+            },
+            "scoreUnit" : "us/op",
+            "rawData" : [
+                [
+                    11.87001453488372,
+                    14.226725352112677,
+                    13.72062727027027,
+                    13.4883125,
+                    13.868263698630138
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 0,
+        "jvm" : "/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "--enable-native-access=ALL-UNNAMED",
+            "-Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf",
+            "-Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec",
+            "-Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native",
+            "-Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search"
+        ],
+        "jdkVersion" : "25.0.2",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.0.2",
+        "warmupIterations" : 3,
+        "warmupTime" : "500 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "500 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "radius" : "10.0",
+            "size" : "100000"
+        },
+        "primaryMetric" : {
+            "score" : 140.26366675,
+            "scoreError" : 6.3563594555999,
+            "scoreConfidence" : [
+                133.90730729440008,
+                146.6200262055999
+            ],
+            "scorePercentiles" : {
+                "0.0" : 138.80173975,
+                "50.0" : 139.80872925,
+                "90.0" : 143.079073,
+                "95.0" : 143.079073,
+                "99.0" : 143.079073,
+                "99.9" : 143.079073,
+                "99.99" : 143.079073,
+                "99.999" : 143.079073,
+                "99.9999" : 143.079073,
+                "100.0" : 143.079073
+            },
+            "scoreUnit" : "us/op",
+            "rawData" : [
+                [
+                    139.80872925,
+                    143.079073,
+                    139.47884375,
+                    138.80173975,
+                    140.149948
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "geosearch.benchmark.GeoIndexBenchmark.searchNaiveAverage",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 0,
+        "jvm" : "/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "--enable-native-access=ALL-UNNAMED",
+            "-Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf",
+            "-Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec",
+            "-Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native",
+            "-Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search"
+        ],
+        "jdkVersion" : "25.0.2",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.0.2",
+        "warmupIterations" : 3,
+        "warmupTime" : "500 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "500 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "radius" : "10.0",
+            "size" : "1000000"
+        },
+        "primaryMetric" : {
+            "score" : 1494.9652499999997,
+            "scoreError" : 31.392929142065032,
+            "scoreConfidence" : [
+                1463.5723208579348,
+                1526.3581791420647
+            ],
+            "scorePercentiles" : {
+                "0.0" : 1485.265666,
+                "50.0" : 1494.636334,
+                "90.0" : 1507.21025,
+                "95.0" : 1507.21025,
+                "99.0" : 1507.21025,
+                "99.9" : 1507.21025,
+                "99.99" : 1507.21025,
+                "99.999" : 1507.21025,
+                "99.9999" : 1507.21025,
+                "100.0" : 1507.21025
+            },
+            "scoreUnit" : "us/op",
+            "rawData" : [
+                [
+                    1485.265666,
+                    1490.7525,
+                    1507.21025,
+                    1496.9615,
+                    1494.636334
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 0,
+        "jvm" : "/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "--enable-native-access=ALL-UNNAMED",
+            "-Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf",
+            "-Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec",
+            "-Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native",
+            "-Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search"
+        ],
+        "jdkVersion" : "25.0.2",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.0.2",
+        "warmupIterations" : 3,
+        "warmupTime" : "500 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "500 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "radius" : "0.1",
+            "size" : "10000"
+        },
+        "primaryMetric" : {
+            "score" : 0.06851582236337277,
+            "scoreError" : 0.003795555095152914,
+            "scoreConfidence" : [
+                0.06472026726821985,
+                0.07231137745852569
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.06747522257849031,
+                "50.0" : 0.0686507577817045,
+                "90.0" : 0.06985240318118949,
+                "95.0" : 0.06985240318118949,
+                "99.0" : 0.06985240318118949,
+                "99.9" : 0.06985240318118949,
+                "99.99" : 0.06985240318118949,
+                "99.999" : 0.06985240318118949,
+                "99.9999" : 0.06985240318118949,
+                "100.0" : 0.06985240318118949
+            },
+            "scoreUnit" : "us/op",
+            "rawData" : [
+                [
+                    0.06985240318118949,
+                    0.06897342404409232,
+                    0.0686507577817045,
+                    0.06762730423138726,
+                    0.06747522257849031
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 0,
+        "jvm" : "/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "--enable-native-access=ALL-UNNAMED",
+            "-Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf",
+            "-Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec",
+            "-Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native",
+            "-Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search"
+        ],
+        "jdkVersion" : "25.0.2",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.0.2",
+        "warmupIterations" : 3,
+        "warmupTime" : "500 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "500 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "radius" : "0.1",
+            "size" : "100000"
+        },
+        "primaryMetric" : {
+            "score" : 0.09468075358071902,
+            "scoreError" : 0.007658462985933572,
+            "scoreConfidence" : [
+                0.08702229059478545,
+                0.1023392165666526
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.09275759100091828,
+                "50.0" : 0.09422885578358209,
+                "90.0" : 0.0980070265864545,
+                "95.0" : 0.0980070265864545,
+                "99.0" : 0.0980070265864545,
+                "99.9" : 0.0980070265864545,
+                "99.99" : 0.0980070265864545,
+                "99.999" : 0.0980070265864545,
+                "99.9999" : 0.0980070265864545,
+                "100.0" : 0.0980070265864545
+            },
+            "scoreUnit" : "us/op",
+            "rawData" : [
+                [
+                    0.09375609813084113,
+                    0.0946541964017991,
+                    0.09275759100091828,
+                    0.09422885578358209,
+                    0.0980070265864545
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 0,
+        "jvm" : "/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "--enable-native-access=ALL-UNNAMED",
+            "-Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf",
+            "-Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec",
+            "-Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native",
+            "-Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search"
+        ],
+        "jdkVersion" : "25.0.2",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.0.2",
+        "warmupIterations" : 3,
+        "warmupTime" : "500 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "500 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "radius" : "0.1",
+            "size" : "1000000"
+        },
+        "primaryMetric" : {
+            "score" : 0.16227316427470578,
+            "scoreError" : 0.007076957066526521,
+            "scoreConfidence" : [
+                0.15519620720817925,
+                0.1693501213412323
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.1600147052114684,
+                "50.0" : 0.16319120401229575,
+                "90.0" : 0.16421467262678804,
+                "95.0" : 0.16421467262678804,
+                "99.0" : 0.16421467262678804,
+                "99.9" : 0.16421467262678804,
+                "99.99" : 0.16421467262678804,
+                "99.999" : 0.16421467262678804,
+                "99.9999" : 0.16421467262678804,
+                "100.0" : 0.16421467262678804
+            },
+            "scoreUnit" : "us/op",
+            "rawData" : [
+                [
+                    0.16319120401229575,
+                    0.16331750315789473,
+                    0.16421467262678804,
+                    0.1600147052114684,
+                    0.1606277363650819
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 0,
+        "jvm" : "/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "--enable-native-access=ALL-UNNAMED",
+            "-Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf",
+            "-Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec",
+            "-Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native",
+            "-Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search"
+        ],
+        "jdkVersion" : "25.0.2",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.0.2",
+        "warmupIterations" : 3,
+        "warmupTime" : "500 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "500 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "radius" : "1.0",
+            "size" : "10000"
+        },
+        "primaryMetric" : {
+            "score" : 0.09832570362474893,
+            "scoreError" : 0.005758532167612998,
+            "scoreConfidence" : [
+                0.09256717145713593,
+                0.10408423579236194
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.09659381542619944,
+                "50.0" : 0.09906838599588114,
+                "90.0" : 0.09992653502176493,
+                "95.0" : 0.09992653502176493,
+                "99.0" : 0.09992653502176493,
+                "99.9" : 0.09992653502176493,
+                "99.99" : 0.09992653502176493,
+                "99.999" : 0.09992653502176493,
+                "99.9999" : 0.09992653502176493,
+                "100.0" : 0.09992653502176493
+            },
+            "scoreUnit" : "us/op",
+            "rawData" : [
+                [
+                    0.09659381542619944,
+                    0.09916989829177303,
+                    0.09906838599588114,
+                    0.09992653502176493,
+                    0.09686988338812609
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 0,
+        "jvm" : "/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "--enable-native-access=ALL-UNNAMED",
+            "-Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf",
+            "-Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec",
+            "-Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native",
+            "-Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search"
+        ],
+        "jdkVersion" : "25.0.2",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.0.2",
+        "warmupIterations" : 3,
+        "warmupTime" : "500 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "500 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "radius" : "1.0",
+            "size" : "100000"
+        },
+        "primaryMetric" : {
+            "score" : 0.2712552956222066,
+            "scoreError" : 0.014806965217515072,
+            "scoreConfidence" : [
+                0.25644833040469156,
+                0.2860622608397217
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.2671990436392489,
+                "50.0" : 0.2696241324079018,
+                "90.0" : 0.2767382882288229,
+                "95.0" : 0.2767382882288229,
+                "99.0" : 0.2767382882288229,
+                "99.9" : 0.2767382882288229,
+                "99.99" : 0.2767382882288229,
+                "99.999" : 0.2767382882288229,
+                "99.9999" : 0.2767382882288229,
+                "100.0" : 0.2767382882288229
+            },
+            "scoreUnit" : "us/op",
+            "rawData" : [
+                [
+                    0.26912725753936484,
+                    0.27358775629569454,
+                    0.2696241324079018,
+                    0.2767382882288229,
+                    0.2671990436392489
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 0,
+        "jvm" : "/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "--enable-native-access=ALL-UNNAMED",
+            "-Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf",
+            "-Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec",
+            "-Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native",
+            "-Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search"
+        ],
+        "jdkVersion" : "25.0.2",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.0.2",
+        "warmupIterations" : 3,
+        "warmupTime" : "500 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "500 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "radius" : "1.0",
+            "size" : "1000000"
+        },
+        "primaryMetric" : {
+            "score" : 1.681409108133829,
+            "scoreError" : 0.16369609231942112,
+            "scoreConfidence" : [
+                1.5177130158144079,
+                1.84510520045325
+            ],
+            "scorePercentiles" : {
+                "0.0" : 1.6144562012779553,
+                "50.0" : 1.7010421574539363,
+                "90.0" : 1.7204009353741496,
+                "95.0" : 1.7204009353741496,
+                "99.0" : 1.7204009353741496,
+                "99.9" : 1.7204009353741496,
+                "99.99" : 1.7204009353741496,
+                "99.999" : 1.7204009353741496,
+                "99.9999" : 1.7204009353741496,
+                "100.0" : 1.7204009353741496
+            },
+            "scoreUnit" : "us/op",
+            "rawData" : [
+                [
+                    1.7010421574539363,
+                    1.705643902192243,
+                    1.7204009353741496,
+                    1.665502344370861,
+                    1.6144562012779553
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 0,
+        "jvm" : "/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "--enable-native-access=ALL-UNNAMED",
+            "-Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf",
+            "-Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec",
+            "-Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native",
+            "-Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search"
+        ],
+        "jdkVersion" : "25.0.2",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.0.2",
+        "warmupIterations" : 3,
+        "warmupTime" : "500 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "500 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "radius" : "10.0",
+            "size" : "10000"
+        },
+        "primaryMetric" : {
+            "score" : 1.4685736623966075,
+            "scoreError" : 0.8261241863780278,
+            "scoreConfidence" : [
+                0.6424494760185797,
+                2.2946978487746352
+            ],
+            "scorePercentiles" : {
+                "0.0" : 1.324856380078637,
+                "50.0" : 1.3858002990397804,
+                "90.0" : 1.8428082877959928,
+                "95.0" : 1.8428082877959928,
+                "99.0" : 1.8428082877959928,
+                "99.9" : 1.8428082877959928,
+                "99.99" : 1.8428082877959928,
+                "99.999" : 1.8428082877959928,
+                "99.9999" : 1.8428082877959928,
+                "100.0" : 1.8428082877959928
+            },
+            "scoreUnit" : "us/op",
+            "rawData" : [
+                [
+                    1.341593293492696,
+                    1.324856380078637,
+                    1.3858002990397804,
+                    1.8428082877959928,
+                    1.4478100515759311
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 0,
+        "jvm" : "/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "--enable-native-access=ALL-UNNAMED",
+            "-Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf",
+            "-Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec",
+            "-Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native",
+            "-Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search"
+        ],
+        "jdkVersion" : "25.0.2",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.0.2",
+        "warmupIterations" : 3,
+        "warmupTime" : "500 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "500 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "radius" : "10.0",
+            "size" : "100000"
+        },
+        "primaryMetric" : {
+            "score" : 12.839745044033076,
+            "scoreError" : 6.1031089752711525,
+            "scoreConfidence" : [
+                6.736636068761924,
+                18.942854019304228
+            ],
+            "scorePercentiles" : {
+                "0.0" : 11.766250976744185,
+                "50.0" : 12.184669686746988,
+                "90.0" : 15.613858984615385,
+                "95.0" : 15.613858984615385,
+                "99.0" : 15.613858984615385,
+                "99.9" : 15.613858984615385,
+                "99.99" : 15.613858984615385,
+                "99.999" : 15.613858984615385,
+                "99.9999" : 15.613858984615385,
+                "100.0" : 15.613858984615385
+            },
+            "scoreUnit" : "us/op",
+            "rawData" : [
+                [
+                    11.981887247058824,
+                    11.766250976744185,
+                    12.184669686746988,
+                    12.652058325,
+                    15.613858984615385
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.37",
+        "benchmark" : "geosearch.benchmark.GeoIndexBenchmark.searchQuadtreeAverage",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 0,
+        "jvm" : "/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/bin/java",
+        "jvmArgs" : [
+            "--enable-native-access=ALL-UNNAMED",
+            "-Dclassworlds.conf=/opt/homebrew/Cellar/maven/3.9.12/libexec/bin/m2.conf",
+            "-Dmaven.home=/opt/homebrew/Cellar/maven/3.9.12/libexec",
+            "-Dlibrary.jansi.path=/opt/homebrew/Cellar/maven/3.9.12/libexec/lib/jansi-native",
+            "-Dmaven.multiModuleProjectDirectory=/Users/entozhevlad/labs/data_sctructures/geo_search"
+        ],
+        "jdkVersion" : "25.0.2",
+        "vmName" : "OpenJDK 64-Bit Server VM",
+        "vmVersion" : "25.0.2",
+        "warmupIterations" : 3,
+        "warmupTime" : "500 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 5,
+        "measurementTime" : "500 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "radius" : "10.0",
+            "size" : "1000000"
+        },
+        "primaryMetric" : {
+            "score" : 248.96104672,
+            "scoreError" : 256.2236862593499,
+            "scoreConfidence" : [
+                -7.262639539349891,
+                505.1847329793499
+            ],
+            "scorePercentiles" : {
+                "0.0" : 216.12745,
+                "50.0" : 219.9648336,
+                "90.0" : 367.9334,
+                "95.0" : 367.9334,
+                "99.0" : 367.9334,
+                "99.9" : 367.9334,
+                "99.99" : 367.9334,
+                "99.999" : 367.9334,
+                "99.9999" : 367.9334,
+                "100.0" : 367.9334
+            },
+            "scoreUnit" : "us/op",
+            "rawData" : [
+                [
+                    219.9648336,
+                    216.12745,
+                    218.8634668,
+                    221.9160832,
+                    367.9334
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    }
+]
+
+
