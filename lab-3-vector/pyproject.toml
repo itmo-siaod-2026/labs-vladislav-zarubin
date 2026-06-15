@@ -1,0 +1,13 @@
+[project]
+name = "vector"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12.8"
+dependencies = [
+    "faiss-cpu>=1.13.2",
+    "gensim>=4.4.0",
+    "hnswlib>=0.8.0",
+    "matplotlib>=3.10.9",
+    "numpy>=2.4.4",
+]

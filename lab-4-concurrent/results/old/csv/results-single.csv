@@ -1,0 +1,10 @@
+"Benchmark","Mode","Threads","Samples","Score","Score Error (99,9%)","Unit","Param: impl","Param: size"
+"org.example.performance.HashMapBenchmark.t1_get","thrpt",1,15,"225,399828","1,848309","ops/us",SIMPLE,100000
+"org.example.performance.HashMapBenchmark.t1_get","thrpt",1,15,"189,007843","2,261873","ops/us",CONCURRENT,100000
+"org.example.performance.HashMapBenchmark.t1_get","thrpt",1,15,"207,984776","1,179501","ops/us",JDK,100000
+"org.example.performance.HashMapBenchmark.t1_mixed","thrpt",1,15,"62,805566","0,488962","ops/us",SIMPLE,100000
+"org.example.performance.HashMapBenchmark.t1_mixed","thrpt",1,15,"51,515656","0,717998","ops/us",CONCURRENT,100000
+"org.example.performance.HashMapBenchmark.t1_mixed","thrpt",1,15,"57,676915","0,434258","ops/us",JDK,100000
+"org.example.performance.HashMapBenchmark.t1_put","thrpt",1,15,"64,122940","0,823688","ops/us",SIMPLE,100000
+"org.example.performance.HashMapBenchmark.t1_put","thrpt",1,15,"40,317139","0,439459","ops/us",CONCURRENT,100000
+"org.example.performance.HashMapBenchmark.t1_put","thrpt",1,15,"42,110640","1,956511","ops/us",JDK,100000
